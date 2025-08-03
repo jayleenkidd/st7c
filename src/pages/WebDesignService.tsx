@@ -11,23 +11,26 @@ interface WebDesignServiceProps {
 const WebDesignService: React.FC<WebDesignServiceProps> = ({ onBack, onServiceSelect }) => {
   // Ensure scroll to top when component mounts
   useEffect(() => {
-    // Force scroll to top immediately
-    window.scrollTo(0, 0);
-    document.documentElement.scrollTop = 0;
-    document.body.scrollTop = 0;
-    
-    // Additional attempts to ensure scroll
-    setTimeout(() => {
-      window.scrollTo(0, 0);
+    // Force scroll to top with multiple methods and timing
+    const scrollToTop = () => {
+      window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
       document.documentElement.scrollTop = 0;
       document.body.scrollTop = 0;
-    }, 1);
-    
-    setTimeout(() => {
-      window.scrollTo(0, 0);
-      document.documentElement.scrollTop = 0;
-      document.body.scrollTop = 0;
-    }, 50);
+      window.pageYOffset = 0;
+    };
+
+    // Immediate scroll
+    scrollToTop();
+
+    // Multiple delayed attempts
+    const timeouts = [0, 1, 10, 50, 100, 200].map(delay =>
+      setTimeout(scrollToTop, delay)
+    );
+
+    // Cleanup timeouts
+    return () => {
+      timeouts.forEach(timeout => clearTimeout(timeout));
+    };
   }, []);
 
   const features = [

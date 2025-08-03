@@ -90,7 +90,7 @@ function App() {
 
   if (activeService) {
     return (
-      <div className="min-h-screen">
+      <div key={activeService} className="min-h-screen">
         {renderServicePage()}
       </div>
     );
