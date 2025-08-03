@@ -1,4 +1,5 @@
 import React from 'react';
+import { useState, useEffect } from 'react';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import USPSection from './components/USPSection';
@@ -10,8 +11,68 @@ import PricingSection from './components/PricingSection';
 import TestimonialsSection from './components/TestimonialsSection';
 import ContactSection from './components/ContactSection';
 import Footer from './components/Footer';
+import WebDesignService from './pages/WebDesignService';
+import BookingEngineService from './pages/BookingEngineService';
+import SEOService from './pages/SEOService';
+import WebRedesignService from './pages/WebRedesignService';
+import HotelPMSService from './pages/HotelPMSService';
+import AnalyticsService from './pages/AnalyticsService';
 
 function App() {
+  const [activeService, setActiveService] = useState<string | null>(null);
+
+  useEffect(() => {
+    const handleServiceNavigation = (event: CustomEvent) => {
+      const serviceId = event.detail.serviceId;
+      // Map service names to IDs
+      const serviceMap: { [key: string]: string } = {
+        'web-design': 'web-design',
+        'booking-engine': 'booking-engine',
+        'seo-optimization': 'seo-optimization',
+        'web-redesign': 'web-redesign',
+        'hotel-pms': 'hotel-pms',
+        'analytics': 'analytics'
+      };
+      
+      if (serviceMap[serviceId]) {
+        // Directly navigate to the selected service
+        setActiveService(serviceMap[serviceId]);
+      }
+    };
+
+    window.addEventListener('navigateToService', handleServiceNavigation as EventListener);
+    return () => {
+      window.removeEventListener('navigateToService', handleServiceNavigation as EventListener);
+    };
+  }, []);
+
+  const renderServicePage = () => {
+    switch (activeService) {
+      case 'web-design':
+        return <WebDesignService onBack={() => setActiveService(null)} />;
+      case 'booking-engine':
+        return <BookingEngineService onBack={() => setActiveService(null)} />;
+      case 'seo-optimization':
+        return <SEOService onBack={() => setActiveService(null)} />;
+      case 'web-redesign':
+        return <WebRedesignService onBack={() => setActiveService(null)} />;
+      case 'hotel-pms':
+        return <HotelPMSService onBack={() => setActiveService(null)} />;
+      case 'analytics':
+        return <AnalyticsService onBack={() => setActiveService(null)} />;
+      default:
+        return null;
+    }
+  };
+
+  if (activeService) {
+    return (
+      <div className="min-h-screen">
+        {renderServicePage()}
+      </div>
+    );
+  }
+
   return (
     <div className="min-h-screen bg-white">
       <Header />
@@ -19,7 +80,7 @@ function App() {
       <USPSection />
       <TemplateShowcase />
       <DashboardShowcase />
-      <ServicesOverview />
+      <ServicesOverview onServiceSelect={setActiveService} />
       <AboutSection />
       <PricingSection />
       <TestimonialsSection />
