@@ -24,7 +24,6 @@ const Header: React.FC<HeaderProps> = ({ onServiceSelect }) => {
     { name: 'Designs', href: '#templates' },
     { name: 'Pricing', href: '#pricing' },
     { name: 'About', href: '#about' },
-    { name: 'About', href: '#about' },
     { name: 'Contact', href: '#contact' }
   ];
 
