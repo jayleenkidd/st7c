@@ -4,9 +4,10 @@ import Header from '../components/Header';
 
 interface WebRedesignServiceProps {
   onBack: () => void;
+  onServiceSelect: (serviceId: string) => void;
 }
 
-const WebRedesignService: React.FC<WebRedesignServiceProps> = ({ onBack }) => {
+const WebRedesignService: React.FC<WebRedesignServiceProps> = ({ onBack, onServiceSelect }) => {
   const reasons = [
     {
       icon: <Eye className="w-6 h-6" />,
@@ -52,7 +53,7 @@ const WebRedesignService: React.FC<WebRedesignServiceProps> = ({ onBack }) => {
 
   return (
     <div className="min-h-screen bg-white animate-fadeIn">
-      <Header />
+      <Header onServiceSelect={onServiceSelect} />
       {/* Header */}
       <div className="bg-gradient-to-r from-[#0A2463] to-[#5FBDB0] text-white py-8 mt-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

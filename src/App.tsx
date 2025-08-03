@@ -35,7 +35,6 @@ function App() {
       };
       
       if (serviceMap[serviceId]) {
-        // Directly navigate to the selected service
         setActiveService(serviceMap[serviceId]);
       }
     };
@@ -49,17 +48,17 @@ function App() {
   const renderServicePage = () => {
     switch (activeService) {
       case 'web-design':
-        return <WebDesignService onBack={() => setActiveService(null)} />;
+        return <WebDesignService onBack={() => setActiveService(null)} onServiceSelect={setActiveService} />;
       case 'booking-engine':
-        return <BookingEngineService onBack={() => setActiveService(null)} />;
+        return <BookingEngineService onBack={() => setActiveService(null)} onServiceSelect={setActiveService} />;
       case 'seo-optimization':
-        return <SEOService onBack={() => setActiveService(null)} />;
+        return <SEOService onBack={() => setActiveService(null)} onServiceSelect={setActiveService} />;
       case 'web-redesign':
-        return <WebRedesignService onBack={() => setActiveService(null)} />;
+        return <WebRedesignService onBack={() => setActiveService(null)} onServiceSelect={setActiveService} />;
       case 'hotel-pms':
-        return <HotelPMSService onBack={() => setActiveService(null)} />;
+        return <HotelPMSService onBack={() => setActiveService(null)} onServiceSelect={setActiveService} />;
       case 'analytics':
-        return <AnalyticsService onBack={() => setActiveService(null)} />;
+        return <AnalyticsService onBack={() => setActiveService(null)} onServiceSelect={setActiveService} />;
       default:
         return null;
     }

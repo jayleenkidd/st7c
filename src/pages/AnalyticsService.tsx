@@ -4,9 +4,10 @@ import Header from '../components/Header';
 
 interface AnalyticsServiceProps {
   onBack: () => void;
+  onServiceSelect: (serviceId: string) => void;
 }
 
-const AnalyticsService: React.FC<AnalyticsServiceProps> = ({ onBack }) => {
+const AnalyticsService: React.FC<AnalyticsServiceProps> = ({ onBack, onServiceSelect }) => {
   const features = [
     {
       icon: <BarChart3 className="w-6 h-6" />,
@@ -52,7 +53,7 @@ const AnalyticsService: React.FC<AnalyticsServiceProps> = ({ onBack }) => {
 
   return (
     <div className="min-h-screen bg-white animate-fadeIn">
-      <Header />
+      <Header onServiceSelect={onServiceSelect} />
       {/* Header */}
       <div className="bg-gradient-to-r from-[#5FBDB0] to-[#FFD700] text-white py-8 mt-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

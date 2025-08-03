@@ -1,7 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X, Phone, Mail, ChevronDown } from 'lucide-react';
 
-const Header: React.FC = () => {
+interface HeaderProps {
+  onServiceSelect?: (serviceId: string) => void;
+}
+
+const Header: React.FC<HeaderProps> = ({ onServiceSelect }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -31,6 +35,37 @@ const Header: React.FC = () => {
     { name: 'Hotel PMS', href: '#services', description: 'Property management system' },
     { name: 'Analytics', href: '#services', description: 'Performance insights' }
   ];
+
+  const handleServiceClick = (serviceName: string) => {
+    const serviceMap: { [key: string]: string } = {
+      'Web Design': 'web-design',
+      'Booking Engine': 'booking-engine',
+      'SEO Optimization': 'seo-optimization',
+      'Web Redesign': 'web-redesign',
+      'Hotel PMS': 'hotel-pms',
+      'Analytics': 'analytics'
+    };
+    
+    const serviceId = serviceMap[serviceName];
+    if (serviceId) {
+      if (onServiceSelect) {
+        // If we have onServiceSelect prop (from service pages), use it directly
+        onServiceSelect(serviceId);
+      } else {
+        // Otherwise, use the event system (from main app)
+        const servicesSection = document.getElementById('services');
+        if (servicesSection) {
+          servicesSection.scrollIntoView({ behavior: 'smooth' });
+          setTimeout(() => {
+            const serviceEvent = new CustomEvent('navigateToService', {
+              detail: { serviceId: serviceId }
+            });
+            window.dispatchEvent(serviceEvent);
+          }, 800);
+        }
+      }
+    }
+  };
 
   return (
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
@@ -86,18 +121,7 @@ const Header: React.FC = () => {
                             onClick={(e) => {
                               e.preventDefault();
                               setIsServicesOpen(false);
-                              // First scroll to services section, then navigate to specific service
-                              const servicesSection = document.getElementById('services');
-                              if (servicesSection) {
-                                servicesSection.scrollIntoView({ behavior: 'smooth' });
-                                // Wait for scroll to complete, then trigger service navigation
-                                setTimeout(() => {
-                                  const serviceEvent = new CustomEvent('navigateToService', {
-                                    detail: { serviceId: service.name.toLowerCase().replace(' ', '-') }
-                                  });
-                                  window.dispatchEvent(serviceEvent);
-                                }, 800);
-                              }
+                              handleServiceClick(service.name);
                             }}
                           >
                             <span className="font-medium text-gray-800 group-hover:text-[#0A2463] transition-colors">
@@ -171,20 +195,8 @@ const Header: React.FC = () => {
                           href="#"
                           onClick={(e) => {
                             e.preventDefault();
-                            setIsServicesOpen(false);
                             setIsMenuOpen(false);
-                            // First scroll to services section, then navigate to specific service
-                            const servicesSection = document.getElementById('services');
-                            if (servicesSection) {
-                              servicesSection.scrollIntoView({ behavior: 'smooth' });
-                              // Wait for scroll to complete, then trigger service navigation
-                              setTimeout(() => {
-                                const serviceEvent = new CustomEvent('navigateToService', {
-                                  detail: { serviceId: service.name.toLowerCase().replace(' ', '-') }
-                                });
-                                window.dispatchEvent(serviceEvent);
-                              }, 800);
-                            }
+                            handleServiceClick(service.name);
                           }}
                           className="block text-gray-600 hover:text-[#0A2463] transition-colors px-4 py-2 text-sm"
                         >

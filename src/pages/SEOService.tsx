@@ -4,9 +4,10 @@ import Header from '../components/Header';
 
 interface SEOServiceProps {
   onBack: () => void;
+  onServiceSelect: (serviceId: string) => void;
 }
 
-const SEOService: React.FC<SEOServiceProps> = ({ onBack }) => {
+const SEOService: React.FC<SEOServiceProps> = ({ onBack, onServiceSelect }) => {
   const features = [
     {
       icon: <Search className="w-6 h-6" />,
@@ -50,7 +51,7 @@ const SEOService: React.FC<SEOServiceProps> = ({ onBack }) => {
 
   return (
     <div className="min-h-screen bg-white animate-fadeIn">
-      <Header />
+      <Header onServiceSelect={onServiceSelect} />
       {/* Header */}
       <div className="bg-gradient-to-r from-[#FFD700] to-[#0A2463] text-white py-8 mt-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
