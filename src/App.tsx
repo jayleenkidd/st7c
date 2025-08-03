@@ -77,11 +77,11 @@ function App() {
       <Header />
       <Hero />
       <USPSection />
+      <ServicesOverview onServiceSelect={setActiveService} />
       <TemplateShowcase />
       <DashboardShowcase />
-      <ServicesOverview onServiceSelect={setActiveService} />
-      <AboutSection />
       <PricingSection />
+      <AboutSection />
       <TestimonialsSection />
       <ContactSection />
       <Footer />
