@@ -1,4 +1,3 @@
-import React from 'react';
 import React, { useEffect } from 'react';
 import { ArrowLeft, BarChart3, Users, Calendar, CreditCard, Bell, Settings, CheckCircle } from 'lucide-react';
 import Header from '../components/Header';

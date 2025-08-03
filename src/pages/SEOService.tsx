@@ -1,4 +1,3 @@
-import React from 'react';
 import React, { useEffect } from 'react';
 import { ArrowLeft, TrendingUp, Search, MapPin, BarChart3, Globe, Target, CheckCircle } from 'lucide-react';
 import Header from '../components/Header';

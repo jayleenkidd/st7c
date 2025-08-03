@@ -1,4 +1,3 @@
-import React from 'react';
 import React, { useEffect } from 'react';
 import { ArrowLeft, Smartphone, Zap, RefreshCw, TrendingUp, Eye, Shield, CheckCircle } from 'lucide-react';
 import Header from '../components/Header';
