@@ -24,9 +24,19 @@ function App() {
   // Scroll to top when service changes
   useEffect(() => {
     if (activeService) {
-      window.scrollTo(0, 0);
+      // Use setTimeout to ensure the component has rendered
+      setTimeout(() => {
+        window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+      }, 0);
     }
   }, [activeService]);
+
+  // Additional scroll to top when component mounts with a service
+  useEffect(() => {
+    if (activeService) {
+      window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+    }
+  }, []);
 
   useEffect(() => {
     const handleServiceNavigation = (event: CustomEvent) => {

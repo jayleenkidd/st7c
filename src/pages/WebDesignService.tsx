@@ -8,6 +8,11 @@ interface WebDesignServiceProps {
 }
 
 const WebDesignService: React.FC<WebDesignServiceProps> = ({ onBack, onServiceSelect }) => {
+  // Ensure scroll to top when component mounts
+  useEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+  }, []);
+
   const features = [
     {
       icon: <Smartphone className="w-6 h-6" />,

@@ -8,6 +8,11 @@ interface WebRedesignServiceProps {
 }
 
 const WebRedesignService: React.FC<WebRedesignServiceProps> = ({ onBack, onServiceSelect }) => {
+  // Ensure scroll to top when component mounts
+  useEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+  }, []);
+
   const reasons = [
     {
       icon: <Eye className="w-6 h-6" />,

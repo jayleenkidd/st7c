@@ -8,6 +8,11 @@ interface AnalyticsServiceProps {
 }
 
 const AnalyticsService: React.FC<AnalyticsServiceProps> = ({ onBack, onServiceSelect }) => {
+  // Ensure scroll to top when component mounts
+  useEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+  }, []);
+
   const features = [
     {
       icon: <BarChart3 className="w-6 h-6" />,
