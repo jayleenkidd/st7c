@@ -24,7 +24,16 @@ const ServicesOverview: React.FC = () => {
       };
       
       if (serviceMap[serviceId]) {
-        setActiveService(serviceMap[serviceId]);
+        // If we're already viewing a service, first go back to overview
+        if (activeService !== null) {
+          setActiveService(null);
+          // Small delay to allow the overview to render before navigating to new service
+          setTimeout(() => {
+            setActiveService(serviceMap[serviceId]);
+          }, 100);
+        } else {
+          setActiveService(serviceMap[serviceId]);
+        }
       }
     };
 
@@ -32,7 +41,7 @@ const ServicesOverview: React.FC = () => {
     return () => {
       window.removeEventListener('navigateToService', handleServiceNavigation as EventListener);
     };
-  }, []);
+  }, [activeService]);
 
   const services = [
     {
