@@ -4,7 +4,7 @@ import Header from '../components/Header';
 
 interface BookingEngineServiceProps {
   onBack: () => void;
-  onServiceSelect: (serviceId: string) => void;
+  onServiceSelect: (serviceId: string | null) => void;
 }
 
 const BookingEngineService: React.FC<BookingEngineServiceProps> = ({ onBack, onServiceSelect }) => {

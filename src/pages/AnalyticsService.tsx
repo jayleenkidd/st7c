@@ -4,7 +4,7 @@ import Header from '../components/Header';
 
 interface AnalyticsServiceProps {
   onBack: () => void;
-  onServiceSelect: (serviceId: string) => void;
+  onServiceSelect: (serviceId: string | null) => void;
 }
 
 const AnalyticsService: React.FC<AnalyticsServiceProps> = ({ onBack, onServiceSelect }) => {

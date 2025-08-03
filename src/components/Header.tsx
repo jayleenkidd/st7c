@@ -67,6 +67,24 @@ const Header: React.FC<HeaderProps> = ({ onServiceSelect }) => {
     }
   };
 
+  const handleMainNavClick = (href: string, e: React.MouseEvent) => {
+    // If we're on a service page (onServiceSelect prop exists), 
+    // we need to go back to homepage first
+    if (onServiceSelect) {
+      e.preventDefault();
+      // Go back to homepage first
+      onServiceSelect(null);
+      // Then scroll to the section after a brief delay
+      setTimeout(() => {
+        const targetElement = document.querySelector(href);
+        if (targetElement) {
+          targetElement.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 100);
+    }
+    // If we're on the main app, let the default anchor behavior work
+  };
+
   return (
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
       isScrolled ? 'bg-white/98 backdrop-blur-md shadow-lg' : 'bg-white/90 backdrop-blur-sm shadow-md'
@@ -96,6 +114,7 @@ const Header: React.FC<HeaderProps> = ({ onServiceSelect }) => {
                 >
                   <a 
                     href={item.href}
+                    onClick={(e) => handleMainNavClick(item.href, e)}
                     className="flex items-center space-x-1 text-gray-800 hover:text-[#0A2463] font-semibold transition-colors duration-200 relative group py-2"
                   >
                     <span>{item.name}</span>
@@ -136,6 +155,7 @@ const Header: React.FC<HeaderProps> = ({ onServiceSelect }) => {
                       <div className="border-t border-gray-100 mt-3 pt-3">
                         <a
                           href="#contact"
+                          onClick={(e) => handleMainNavClick('#contact', e)}
                           className="block px-3 py-2 text-center bg-gradient-to-r from-[#0A2463] to-[#5FBDB0] text-white rounded-lg font-medium hover:shadow-md transition-all"
                         >
                           Get Free Consultation
@@ -148,6 +168,7 @@ const Header: React.FC<HeaderProps> = ({ onServiceSelect }) => {
                 <a
                 key={item.name}
                 href={item.href}
+                onClick={(e) => handleMainNavClick(item.href, e)}
                 className="text-gray-800 hover:text-[#0A2463] font-semibold transition-colors duration-200 relative group py-2"
               >
                 {item.name}
@@ -209,8 +230,11 @@ const Header: React.FC<HeaderProps> = ({ onServiceSelect }) => {
                   <a
                   key={item.name}
                   href={item.href}
+                  onClick={(e) => {
+                    handleMainNavClick(item.href, e);
+                    setIsMenuOpen(false);
+                  }}
                   className="text-gray-800 hover:text-[#0A2463] font-semibold transition-colors px-4 py-2"
-                  onClick={() => setIsMenuOpen(false)}
                 >
                   {item.name}
                 </a>

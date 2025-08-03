@@ -4,7 +4,7 @@ import Header from '../components/Header';
 
 interface SEOServiceProps {
   onBack: () => void;
-  onServiceSelect: (serviceId: string) => void;
+  onServiceSelect: (serviceId: string | null) => void;
 }
 
 const SEOService: React.FC<SEOServiceProps> = ({ onBack, onServiceSelect }) => {

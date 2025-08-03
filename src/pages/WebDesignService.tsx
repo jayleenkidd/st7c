@@ -4,7 +4,7 @@ import Header from '../components/Header';
 
 interface WebDesignServiceProps {
   onBack: () => void;
-  onServiceSelect: (serviceId: string) => void;
+  onServiceSelect: (serviceId: string | null) => void;
 }
 
 const WebDesignService: React.FC<WebDesignServiceProps> = ({ onBack, onServiceSelect }) => {

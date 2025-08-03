@@ -48,17 +48,17 @@ function App() {
   const renderServicePage = () => {
     switch (activeService) {
       case 'web-design':
-        return <WebDesignService onBack={() => setActiveService(null)} onServiceSelect={setActiveService} />;
+        return <WebDesignService onBack={() => setActiveService(null)} onServiceSelect={(serviceId) => setActiveService(serviceId)} />;
       case 'booking-engine':
-        return <BookingEngineService onBack={() => setActiveService(null)} onServiceSelect={setActiveService} />;
+        return <BookingEngineService onBack={() => setActiveService(null)} onServiceSelect={(serviceId) => setActiveService(serviceId)} />;
       case 'seo-optimization':
-        return <SEOService onBack={() => setActiveService(null)} onServiceSelect={setActiveService} />;
+        return <SEOService onBack={() => setActiveService(null)} onServiceSelect={(serviceId) => setActiveService(serviceId)} />;
       case 'web-redesign':
-        return <WebRedesignService onBack={() => setActiveService(null)} onServiceSelect={setActiveService} />;
+        return <WebRedesignService onBack={() => setActiveService(null)} onServiceSelect={(serviceId) => setActiveService(serviceId)} />;
       case 'hotel-pms':
-        return <HotelPMSService onBack={() => setActiveService(null)} onServiceSelect={setActiveService} />;
+        return <HotelPMSService onBack={() => setActiveService(null)} onServiceSelect={(serviceId) => setActiveService(serviceId)} />;
       case 'analytics':
-        return <AnalyticsService onBack={() => setActiveService(null)} onServiceSelect={setActiveService} />;
+        return <AnalyticsService onBack={() => setActiveService(null)} onServiceSelect={(serviceId) => setActiveService(serviceId)} />;
       default:
         return null;
     }
