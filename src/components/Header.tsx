@@ -21,6 +21,7 @@ const Header: React.FC<HeaderProps> = ({ onServiceSelect }) => {
   const navItems = [
     { name: 'Home', href: '#home' },
     { name: 'Services', href: '#services' },
+    { name: 'Designs', href: '#templates' },
     { name: 'Pricing', href: '#pricing' },
     { name: 'About', href: '#about' },
     { name: 'About', href: '#about' },
