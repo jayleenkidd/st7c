@@ -21,6 +21,13 @@ import AnalyticsService from './pages/AnalyticsService';
 function App() {
   const [activeService, setActiveService] = useState<string | null>(null);
 
+  // Scroll to top when service changes
+  useEffect(() => {
+    if (activeService) {
+      window.scrollTo(0, 0);
+    }
+  }, [activeService]);
+
   useEffect(() => {
     const handleServiceNavigation = (event: CustomEvent) => {
       const serviceId = event.detail.serviceId;
