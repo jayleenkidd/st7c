@@ -1,4 +1,5 @@
 import React from 'react';
+import React, { useEffect } from 'react';
 import { ArrowLeft, BarChart3, Users, Calendar, CreditCard, Bell, Settings, CheckCircle } from 'lucide-react';
 import Header from '../components/Header';
 
@@ -10,7 +11,23 @@ interface HotelPMSServiceProps {
 const HotelPMSService: React.FC<HotelPMSServiceProps> = ({ onBack, onServiceSelect }) => {
   // Ensure scroll to top when component mounts
   useEffect(() => {
-    window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+    // Force scroll to top immediately
+    window.scrollTo(0, 0);
+    document.documentElement.scrollTop = 0;
+    document.body.scrollTop = 0;
+    
+    // Additional attempts to ensure scroll
+    setTimeout(() => {
+      window.scrollTo(0, 0);
+      document.documentElement.scrollTop = 0;
+      document.body.scrollTop = 0;
+    }, 1);
+    
+    setTimeout(() => {
+      window.scrollTo(0, 0);
+      document.documentElement.scrollTop = 0;
+      document.body.scrollTop = 0;
+    }, 50);
   }, []);
 
   const features = [

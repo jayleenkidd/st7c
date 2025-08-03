@@ -24,19 +24,26 @@ function App() {
   // Scroll to top when service changes
   useEffect(() => {
     if (activeService) {
-      // Use setTimeout to ensure the component has rendered
+      // Force immediate scroll to top
+      window.scrollTo(0, 0);
+      // Also use setTimeout as backup
       setTimeout(() => {
-        window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
-      }, 0);
+        window.scrollTo(0, 0);
+      }, 10);
+      // Additional backup with longer delay
+      setTimeout(() => {
+        window.scrollTo(0, 0);
+      }, 100);
     }
   }, [activeService]);
 
-  // Additional scroll to top when component mounts with a service
+  // Force scroll to top when switching between services
   useEffect(() => {
-    if (activeService) {
-      window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
-    }
-  }, []);
+    // Always scroll to top when activeService changes
+    window.scrollTo(0, 0);
+    document.documentElement.scrollTop = 0;
+    document.body.scrollTop = 0;
+  }, [activeService]);
 
   useEffect(() => {
     const handleServiceNavigation = (event: CustomEvent) => {
