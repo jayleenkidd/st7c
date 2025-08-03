@@ -86,11 +86,18 @@ const Header: React.FC = () => {
                             onClick={(e) => {
                               e.preventDefault();
                               setIsServicesOpen(false);
-                              // Navigate to specific service page
-                              const serviceEvent = new CustomEvent('navigateToService', {
-                                detail: { serviceId: service.name.toLowerCase().replace(' ', '-') }
-                              });
-                              window.dispatchEvent(serviceEvent);
+                              // First scroll to services section, then navigate to specific service
+                              const servicesSection = document.getElementById('services');
+                              if (servicesSection) {
+                                servicesSection.scrollIntoView({ behavior: 'smooth' });
+                                // Wait for scroll to complete, then trigger service navigation
+                                setTimeout(() => {
+                                  const serviceEvent = new CustomEvent('navigateToService', {
+                                    detail: { serviceId: service.name.toLowerCase().replace(' ', '-') }
+                                  });
+                                  window.dispatchEvent(serviceEvent);
+                                }, 800);
+                              }
                             }}
                           >
                             <span className="font-medium text-gray-800 group-hover:text-[#0A2463] transition-colors">
@@ -165,21 +172,21 @@ const Header: React.FC = () => {
                           onClick={(e) => {
                             e.preventDefault();
                             setIsServicesOpen(false);
-                            // Scroll to services section and then navigate to specific service
+                            setIsMenuOpen(false);
+                            // First scroll to services section, then navigate to specific service
                             const servicesSection = document.getElementById('services');
                             if (servicesSection) {
                               servicesSection.scrollIntoView({ behavior: 'smooth' });
-                              // Small delay to allow scroll, then trigger service navigation
+                              // Wait for scroll to complete, then trigger service navigation
                               setTimeout(() => {
                                 const serviceEvent = new CustomEvent('navigateToService', {
                                   detail: { serviceId: service.name.toLowerCase().replace(' ', '-') }
                                 });
                                 window.dispatchEvent(serviceEvent);
-                              }, 500);
+                              }, 800);
                             }
                           }}
                           className="block text-gray-600 hover:text-[#0A2463] transition-colors px-4 py-2 text-sm"
-                          onClick={() => setIsMenuOpen(false)}
                         >
                           {service.name}
                         </a>
