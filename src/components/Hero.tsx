@@ -116,6 +116,18 @@ const Hero: React.FC = () => {
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+        {/* Header */}
+        <div className="text-center mb-12">
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold font-poppins leading-none tracking-tight text-white mb-4">
+            <span className="text-[#FFD700] text-2xl md:text-3xl lg:text-4xl font-bold tracking-wider block mb-2">STAYTECH</span>
+            <span className="block">Hotel Solutions</span>
+          </h1>
+          
+          <p className="text-xl md:text-2xl font-light text-white/90 mb-6">
+            Complete digital transformation for hotels
+          </p>
+        </div>
+
         {/* Service Card Carousel */}
         <div className="relative max-w-4xl mx-auto">
           {/* Main Service Card */}
@@ -233,7 +245,7 @@ const Hero: React.FC = () => {
         </div>
 
         {/* CTA Section */}
-        <div className="text-center mt-8">
+        <div className="text-center mt-12">
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="#templates"
@@ -251,18 +263,6 @@ const Hero: React.FC = () => {
           </div>
         </div>
       </div>
-        {/* Header - Moved Below Carousel */}
-        <div className="text-center mt-8 mb-8">
-          <h1 className="text-3xl md:text-5xl lg:text-6xl font-extrabold font-poppins leading-none tracking-tight text-white mb-4">
-            <span className="text-[#FFD700] text-xl md:text-2xl lg:text-3xl font-bold tracking-wider block mb-2">STAYTECH</span>
-            <span className="block">Hospitality Solutions</span>
-          </h1>
-          
-          <p className="text-lg md:text-xl font-light text-white/90">
-            Complete digital transformation for hotels
-          </p>
-        </div>
-
 
       {/* Auto-play indicator */}
       <div className="absolute bottom-4 left-4 text-white/60 text-xs">
