@@ -118,19 +118,19 @@ const Hero: React.FC = () => {
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         {/* Header */}
         <div className="text-center mb-12">
-          <div className="inline-flex items-center space-x-2 bg-white/10 backdrop-blur-md rounded-full px-4 py-2 border border-white/20 mb-6">
-            <Shield className="w-5 h-5 text-[#FFD700]" />
-            <span className="text-sm font-medium text-white">No Advance Payment • Pay After Satisfaction</span>
-          </div>
-          
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold font-poppins leading-none tracking-tight text-white mb-4">
             <span className="text-[#FFD700] text-2xl md:text-3xl lg:text-4xl font-bold tracking-wider block mb-2">STAYTECH</span>
             <span className="block">Hotel Solutions</span>
           </h1>
           
-          <p className="text-xl md:text-2xl font-light text-white/90 mb-8">
+          <p className="text-xl md:text-2xl font-light text-white/90 mb-6">
             Complete digital transformation for hotels
           </p>
+          
+          <div className="inline-flex items-center space-x-2 bg-white/10 backdrop-blur-md rounded-full px-4 py-2 border border-white/20">
+            <Shield className="w-5 h-5 text-[#FFD700]" />
+            <span className="text-sm font-medium text-white">No Advance Payment • Pay After Satisfaction</span>
+          </div>
         </div>
 
         {/* Service Card Carousel */}
