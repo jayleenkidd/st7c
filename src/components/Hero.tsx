@@ -28,18 +28,29 @@ const Hero: React.FC = () => {
             <div className="space-y-4">
               <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold font-poppins leading-none tracking-tight">
                 <span className="text-[#FFD700] text-3xl md:text-4xl lg:text-5xl font-bold tracking-wider block mb-2">STAYTECH</span>
-                <span className="block text-white">Revolutionizing</span>
-                <span className="block text-[#5FBDB0] bg-gradient-to-r from-[#5FBDB0] to-[#FFD700] bg-clip-text text-transparent">Hospitality Technology</span>
+                <span className="block text-white">Hotel Websites</span>
+                <span className="block text-[#5FBDB0] bg-gradient-to-r from-[#5FBDB0] to-[#FFD700] bg-clip-text text-transparent">That Convert</span>
               </h1>
               <p className="text-xl md:text-2xl font-light text-blue-100">
                 No Advance Payment Needed - Try First, Pay Later!
               </p>
             </div>
 
-            {/* Description */}
-            <p className="text-lg text-blue-100 max-w-2xl leading-relaxed">
-              StayTech is different. We're not just another IT company building websites—we are a dedicated hotel software development agency, founded by IIT graduates with a clear mission: to help hotels break free from OTA dependence and drive direct, commission-free bookings.
-            </p>
+            {/* Key Benefits */}
+            <div className="space-y-3">
+              <div className="flex items-center space-x-3">
+                <div className="w-2 h-2 bg-[#FFD700] rounded-full"></div>
+                <span className="text-blue-100">Pay only when you're 100% satisfied</span>
+              </div>
+              <div className="flex items-center space-x-3">
+                <div className="w-2 h-2 bg-[#FFD700] rounded-full"></div>
+                <span className="text-blue-100">Choose from 100+ ready hotel designs</span>
+              </div>
+              <div className="flex items-center space-x-3">
+                <div className="w-2 h-2 bg-[#FFD700] rounded-full"></div>
+                <span className="text-blue-100">Complete solution: Website + Booking + SEO</span>
+              </div>
+            </div>
 
             {/* CTAs */}
             <div className="flex flex-col sm:flex-row gap-4">
