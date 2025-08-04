@@ -116,18 +116,6 @@ const Hero: React.FC = () => {
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-        {/* Header */}
-        <div className="text-center mb-12">
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold font-poppins leading-none tracking-tight text-white mb-4">
-            <span className="text-[#FFD700] text-2xl md:text-3xl lg:text-4xl font-bold tracking-wider block mb-2">STAYTECH</span>
-            <span className="block">Hotel Solutions</span>
-          </h1>
-          
-          <p className="text-xl md:text-2xl font-light text-white/90 mb-6">
-            Complete digital transformation for hotels
-          </p>
-        </div>
-
         {/* Service Card Carousel */}
         <div className="relative max-w-4xl mx-auto">
           {/* Main Service Card */}
@@ -242,6 +230,18 @@ const Hero: React.FC = () => {
               }`}
             />
           ))}
+        </div>
+
+        {/* Header */}
+        <div className="text-center mt-12">
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold font-poppins leading-none tracking-tight text-white mb-4">
+            <span className="text-[#FFD700] text-2xl md:text-3xl lg:text-4xl font-bold tracking-wider block mb-2">STAYTECH</span>
+            <span className="block">Hotel Solutions</span>
+          </h1>
+          
+          <p className="text-xl md:text-2xl font-light text-white/90 mb-6">
+            Complete digital transformation for hotels
+          </p>
         </div>
 
         {/* CTA Section */}
