@@ -105,21 +105,21 @@ const Hero: React.FC = () => {
   return (
     <section id="home" className="relative min-h-screen flex flex-col">
       {/* Stunning Mobile-First Hero Section */}
-      <div className="relative bg-gradient-to-br from-[#0A2463] via-[#1e3a8a] to-[#5FBDB0] min-h-[70vh] md:min-h-[60vh] flex items-center justify-center overflow-hidden">
+      <div className="relative bg-gradient-to-br from-[#0A2463] via-[#1e3a8a] to-[#5FBDB0] min-h-screen flex items-center justify-center overflow-hidden">
         {/* Video Background */}
         <video
           autoPlay
           muted
           loop
           playsInline
-          className="absolute inset-0 w-full h-full object-cover z-0"
+          className="absolute inset-0 w-full h-full object-cover z-0 top-0"
         >
           <source src="https://videos.pexels.com/video-files/3571264/3571264-uhd_2560_1440_30fps.mp4" type="video/mp4" />
           <source src="https://videos.pexels.com/video-files/4992249/4992249-hd_1920_1080_25fps.mp4" type="video/mp4" />
         </video>
         
         {/* Video Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-r from-[#0A2463]/80 via-[#1e3a8a]/60 to-[#5FBDB0]/40 z-10"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-[#0A2463]/70 via-[#1e3a8a]/50 to-[#5FBDB0]/30 z-10"></div>
         
         {/* Animated Background Elements */}
         <div className="absolute inset-0 overflow-hidden z-20">
@@ -129,7 +129,7 @@ const Hero: React.FC = () => {
         </div>
 
         {/* Main Hero Content */}
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-12 text-center">
+        <div className="relative z-30 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 pb-8">
           {/* Main Headline */}
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-white mb-4 leading-tight animate-fadeIn">
             <span className="block">Hotel Websites</span>
@@ -340,14 +340,14 @@ const Hero: React.FC = () => {
       </div>
 
       {/* Brand Section */}
-      <div className="bg-white py-8">
+      <div className="bg-white py-12 md:py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-extrabold font-poppins leading-none tracking-tight text-[#0A2463] mb-4">
-            <span className="text-[#FFD700] text-xl md:text-2xl lg:text-3xl font-bold tracking-wider block mb-2">STAYTECH</span>
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold font-poppins leading-none tracking-tight text-[#0A2463] mb-6">
+            <span className="text-[#FFD700] text-2xl md:text-3xl lg:text-4xl font-bold tracking-wider block mb-3">STAYTECH</span>
             <span className="block">Hotel Solutions</span>
           </h1>
           
-          <p className="text-lg md:text-xl font-light text-gray-600">
+          <p className="text-xl md:text-2xl font-light text-gray-600 max-w-3xl mx-auto">
             Complete digital transformation for hotels
           </p>
         </div>

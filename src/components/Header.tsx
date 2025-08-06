@@ -87,7 +87,7 @@ const Header: React.FC<HeaderProps> = ({ onServiceSelect }) => {
 
   return (
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      isScrolled ? 'bg-white/98 backdrop-blur-md shadow-lg' : 'bg-white/90 backdrop-blur-sm shadow-md'
+      isScrolled ? 'bg-white/95 backdrop-blur-md shadow-lg' : 'bg-transparent backdrop-blur-sm'
     }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
@@ -97,8 +97,12 @@ const Header: React.FC<HeaderProps> = ({ onServiceSelect }) => {
               <span className="text-white font-bold text-lg">ST</span>
             </div>
             <div>
-              <h1 className="text-xl font-bold text-[#0A2463] font-poppins">StayTech</h1>
-              <p className="text-xs text-gray-600">Hospitality Solutions</p>
+              <h1 className={`text-xl font-bold font-poppins transition-colors ${
+                isScrolled ? 'text-[#0A2463]' : 'text-white'
+              }`}>StayTech</h1>
+              <p className={`text-xs transition-colors ${
+                isScrolled ? 'text-gray-600' : 'text-white/80'
+              }`}>Hospitality Solutions</p>
             </div>
           </a>
 
@@ -115,7 +119,9 @@ const Header: React.FC<HeaderProps> = ({ onServiceSelect }) => {
                   <a 
                     href={item.href}
                     onClick={(e) => handleMainNavClick(item.href, e)}
-                    className="flex items-center space-x-1 text-gray-800 hover:text-[#0A2463] font-semibold transition-colors duration-200 relative group py-2"
+                    className={`flex items-center space-x-1 font-semibold transition-colors duration-200 relative group py-2 ${
+                      isScrolled ? 'text-gray-800 hover:text-[#0A2463]' : 'text-white hover:text-[#FFD700]'
+                    }`}
                   >
                     <span>{item.name}</span>
                     <ChevronDown className="w-4 h-4 transition-transform duration-200 group-hover:rotate-180" />
@@ -169,7 +175,9 @@ const Header: React.FC<HeaderProps> = ({ onServiceSelect }) => {
                 key={item.name}
                 href={item.href}
                 onClick={(e) => handleMainNavClick(item.href, e)}
-                className="text-gray-800 hover:text-[#0A2463] font-semibold transition-colors duration-200 relative group py-2"
+                className={`font-semibold transition-colors duration-200 relative group py-2 ${
+                  isScrolled ? 'text-gray-800 hover:text-[#0A2463]' : 'text-white hover:text-[#FFD700]'
+                }`}
               >
                 {item.name}
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#FFD700] transition-all duration-300 group-hover:w-full"></span>
@@ -180,11 +188,15 @@ const Header: React.FC<HeaderProps> = ({ onServiceSelect }) => {
 
           {/* Contact Info */}
           <div className="hidden md:flex items-center space-x-4">
-            <a href="tel:+911234567890" className="flex items-center space-x-1 text-sm text-gray-700 hover:text-[#0A2463] transition-colors font-medium">
+            <a href="tel:+911234567890" className={`flex items-center space-x-1 text-sm font-medium transition-colors ${
+              isScrolled ? 'text-gray-700 hover:text-[#0A2463]' : 'text-white/90 hover:text-[#FFD700]'
+            }`}>
               <Phone className="w-4 h-4" />
               <span>+91 12345 67890</span>
             </a>
-            <a href="mailto:info@staytech.com" className="flex items-center space-x-1 text-sm text-gray-700 hover:text-[#0A2463] transition-colors font-medium">
+            <a href="mailto:info@staytech.com" className={`flex items-center space-x-1 text-sm font-medium transition-colors ${
+              isScrolled ? 'text-gray-700 hover:text-[#0A2463]' : 'text-white/90 hover:text-[#FFD700]'
+            }`}>
               <Mail className="w-4 h-4" />
               <span>info@staytech.com</span>
             </a>
@@ -193,7 +205,11 @@ const Header: React.FC<HeaderProps> = ({ onServiceSelect }) => {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="lg:hidden p-2 rounded-md text-gray-800 hover:text-[#0A2463] hover:bg-gray-100 transition-colors"
+            className={`lg:hidden p-2 rounded-md transition-colors ${
+              isScrolled 
+                ? 'text-gray-800 hover:text-[#0A2463] hover:bg-gray-100' 
+                : 'text-white hover:text-[#FFD700] hover:bg-white/10'
+            }`}
           >
             {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
@@ -201,7 +217,7 @@ const Header: React.FC<HeaderProps> = ({ onServiceSelect }) => {
 
         {/* Mobile Menu */}
         {isMenuOpen && (
-          <div className="lg:hidden bg-white/98 backdrop-blur-md border-t border-gray-200 py-4">
+          <div className="lg:hidden bg-white/95 backdrop-blur-md border-t border-white/20 py-4">
             <div className="flex flex-col space-y-4">
               {navItems.map((item) => (
                 item.name === 'Services' ? (
