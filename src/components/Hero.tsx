@@ -188,9 +188,39 @@ const Hero: React.FC = () => {
       </div>
 
       {/* Service Carousel Section */}
-      <div className="relative bg-gray-900 flex items-center justify-center overflow-hidden py-12">
+      <div className="relative bg-gray-900 flex items-center justify-center overflow-hidden py-12 min-h-screen">
+        {/* Background Video */}
+        <div className="absolute inset-0 w-full h-full">
+          <video
+            autoPlay
+            muted
+            loop
+            playsInline
+            className="w-full h-full object-cover"
+            poster="https://images.pexels.com/photos/271618/pexels-photo-271618.jpeg?auto=compress&cs=tinysrgb&w=1920"
+          >
+            <source
+              src="https://videos.pexels.com/video-files/3571264/3571264-uhd_2560_1440_30fps.mp4"
+              type="video/mp4"
+            />
+            <source
+              src="https://videos.pexels.com/video-files/3571264/3571264-hd_1920_1080_30fps.mp4"
+              type="video/mp4"
+            />
+            {/* Fallback image if video doesn't load */}
+            <img
+              src="https://images.pexels.com/photos/271618/pexels-photo-271618.jpeg?auto=compress&cs=tinysrgb&w=1920"
+              alt="Luxury Hotel"
+              className="w-full h-full object-cover"
+            />
+          </video>
+          {/* Video overlay for better text readability */}
+          <div className="absolute inset-0 bg-black/40"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-[#0A2463]/60 to-[#5FBDB0]/40"></div>
+        </div>
+
         {/* Background Image with Overlay */}
-        <div className="absolute inset-0">
+        <div className="absolute inset-0 opacity-0">
           <img
             src={currentService.bgImage}
             alt={currentService.title}
