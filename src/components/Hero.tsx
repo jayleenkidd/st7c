@@ -106,11 +106,26 @@ const Hero: React.FC = () => {
     <section id="home" className="relative min-h-screen flex flex-col">
       {/* Stunning Mobile-First Hero Section */}
       <div className="relative bg-gradient-to-br from-[#0A2463] via-[#1e3a8a] to-[#5FBDB0] min-h-[70vh] md:min-h-[60vh] flex items-center justify-center overflow-hidden">
+        {/* Video Background */}
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="absolute inset-0 w-full h-full object-cover z-0"
+        >
+          <source src="https://videos.pexels.com/video-files/3571264/3571264-uhd_2560_1440_30fps.mp4" type="video/mp4" />
+          <source src="https://videos.pexels.com/video-files/4992249/4992249-hd_1920_1080_25fps.mp4" type="video/mp4" />
+        </video>
+        
+        {/* Video Overlay */}
+        <div className="absolute inset-0 bg-gradient-to-r from-[#0A2463]/80 via-[#1e3a8a]/60 to-[#5FBDB0]/40 z-10"></div>
+        
         {/* Animated Background Elements */}
-        <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute -top-40 -right-40 w-80 h-80 bg-[#FFD700]/10 rounded-full blur-3xl animate-pulse"></div>
-          <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-[#5FBDB0]/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
-          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-white/5 rounded-full blur-3xl animate-pulse delay-500"></div>
+        <div className="absolute inset-0 overflow-hidden z-20">
+          <div className="absolute -top-40 -right-40 w-80 h-80 bg-[#FFD700]/20 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-[#5FBDB0]/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
+          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-white/10 rounded-full blur-3xl animate-pulse delay-500"></div>
         </div>
 
         {/* Main Hero Content */}
@@ -188,7 +203,7 @@ const Hero: React.FC = () => {
       </div>
 
       {/* Service Carousel Section */}
-      <div className="relative bg-gray-900 flex items-center justify-center overflow-hidden py-12">
+      <div className="relative bg-gray-900/95 backdrop-blur-sm flex items-center justify-center overflow-hidden py-12 z-30">
         {/* Background Image with Overlay */}
         <div className="absolute inset-0">
           <img
