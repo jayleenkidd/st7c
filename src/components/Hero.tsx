@@ -115,6 +115,12 @@ const Hero: React.FC = () => {
 
         {/* Main Hero Content */}
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 text-center">
+          {/* Premium Badge */}
+          <div className="inline-flex items-center space-x-2 bg-[#FFD700]/20 backdrop-blur-md border border-[#FFD700]/30 rounded-full px-4 py-2 mb-6 animate-fadeIn">
+            <Shield className="w-4 h-4 text-[#FFD700]" />
+            <span className="text-[#FFD700] text-sm font-medium">No Advance Payment Required</span>
+          </div>
+
           {/* Main Headline */}
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-white mb-4 leading-tight animate-fadeIn">
             <span className="block">Hotel Websites</span>
