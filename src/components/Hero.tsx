@@ -104,6 +104,112 @@ const Hero: React.FC = () => {
 
   return (
     <section id="home" className="relative min-h-screen flex flex-col">
+      {/* Top Video Hero Section */}
+      <div className="relative h-screen flex items-center justify-center overflow-hidden">
+        {/* Background Video */}
+        <div className="absolute inset-0 w-full h-full">
+          <video
+            autoPlay
+            muted
+            loop
+            playsInline
+            className="w-full h-full object-cover"
+            poster="https://images.pexels.com/photos/1134176/pexels-photo-1134176.jpeg?auto=compress&cs=tinysrgb&w=1920"
+          >
+            <source
+              src="https://videos.pexels.com/video-files/4992312/4992312-uhd_2560_1440_25fps.mp4"
+              type="video/mp4"
+            />
+            <source
+              src="https://videos.pexels.com/video-files/4992312/4992312-hd_1920_1080_25fps.mp4"
+              type="video/mp4"
+            />
+            {/* Fallback image if video doesn't load */}
+            <img
+              src="https://images.pexels.com/photos/1134176/pexels-photo-1134176.jpeg?auto=compress&cs=tinysrgb&w=1920"
+              alt="Luxury Hotel Interior"
+              className="w-full h-full object-cover"
+            />
+          </video>
+          {/* Video overlay for better text readability */}
+          <div className="absolute inset-0 bg-black/50"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-[#0A2463]/70 to-[#5FBDB0]/50"></div>
+        </div>
+
+        {/* Hero Content */}
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-12 text-center">
+          {/* Main Headline */}
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-white mb-6 leading-tight animate-fadeIn">
+            <span className="block">Transform Your</span>
+            <span className="block bg-gradient-to-r from-[#FFD700] to-[#FFA500] bg-clip-text text-transparent">
+              Hotel's Future
+            </span>
+          </h1>
+
+          {/* Subtitle */}
+          <p className="text-lg sm:text-xl md:text-2xl text-blue-100 mb-8 max-w-4xl mx-auto leading-relaxed animate-fadeIn delay-200">
+            Professional websites, integrated booking systems, and digital solutions 
+            <span className="block mt-2 text-[#FFD700] font-semibold">that drive direct bookings and maximize revenue</span>
+          </p>
+
+          {/* Key Benefits - Mobile Optimized */}
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8 max-w-4xl mx-auto animate-fadeIn delay-300">
+            <div className="flex items-center justify-center space-x-2 bg-white/10 backdrop-blur-md rounded-lg px-4 py-3 border border-white/20">
+              <CheckCircle className="w-5 h-5 text-[#FFD700] flex-shrink-0" />
+              <span className="text-white text-sm font-medium">No Advance Payment</span>
+            </div>
+            <div className="flex items-center justify-center space-x-2 bg-white/10 backdrop-blur-md rounded-lg px-4 py-3 border border-white/20">
+              <Zap className="w-5 h-5 text-[#FFD700] flex-shrink-0" />
+              <span className="text-white text-sm font-medium">7-Day Delivery</span>
+            </div>
+            <div className="flex items-center justify-center space-x-2 bg-white/10 backdrop-blur-md rounded-lg px-4 py-3 border border-white/20">
+              <Star className="w-5 h-5 text-[#FFD700] flex-shrink-0" />
+              <span className="text-white text-sm font-medium">200+ Hotels Served</span>
+            </div>
+          </div>
+
+          {/* CTA Buttons - Mobile Optimized */}
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-fadeIn delay-400">
+            <a
+              href="#services"
+              className="group w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 bg-[#FFD700] text-[#0A2463] font-bold rounded-xl hover:bg-[#FFD700]/90 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
+            >
+              <span>Explore Our Services</span>
+              <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+            </a>
+            <a
+              href="#templates"
+              className="group w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 bg-white/10 backdrop-blur-md text-white font-bold rounded-xl hover:bg-white/20 transition-all duration-300 border border-white/20"
+            >
+              <span>View Hotel Designs</span>
+            </a>
+          </div>
+
+          {/* Trust Indicators */}
+          <div className="mt-8 flex flex-wrap justify-center items-center gap-6 text-blue-200 text-sm animate-fadeIn delay-500">
+            <div className="flex items-center space-x-2">
+              <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
+              <span>IIT Graduate Team</span>
+            </div>
+            <div className="flex items-center space-x-2">
+              <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
+              <span>15+ Countries</span>
+            </div>
+            <div className="flex items-center space-x-2">
+              <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
+              <span>5.0 Rating</span>
+            </div>
+          </div>
+        </div>
+
+        {/* Scroll Indicator */}
+        <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 animate-bounce">
+          <div className="w-6 h-10 border-2 border-white/30 rounded-full flex justify-center">
+            <div className="w-1 h-3 bg-white/60 rounded-full mt-2 animate-pulse"></div>
+          </div>
+        </div>
+      </div>
+
       {/* Stunning Mobile-First Hero Section */}
       <div className="relative bg-gradient-to-br from-[#0A2463] via-[#1e3a8a] to-[#5FBDB0] min-h-[70vh] md:min-h-[60vh] flex items-center justify-center overflow-hidden">
         {/* Animated Background Elements */}
