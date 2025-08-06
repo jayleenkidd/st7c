@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { ArrowRight, ChevronLeft, ChevronRight, Globe, Calendar, TrendingUp, Smartphone, BarChart3, Settings, Star, Shield } from 'lucide-react';
+import { ArrowRight, ChevronLeft, ChevronRight, Globe, Calendar, TrendingUp, Smartphone, BarChart3, Settings, Star, Shield, Zap, CheckCircle } from 'lucide-react';
 
 const Hero: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -103,170 +103,245 @@ const Hero: React.FC = () => {
   const currentService = services[currentSlide];
 
   return (
-    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gray-900">
-      {/* Background Image with Overlay */}
-      <div className="absolute inset-0">
-        <img
-          src={currentService.bgImage}
-          alt={currentService.title}
-          className="w-full h-full object-cover transition-all duration-1000 ease-in-out"
-        />
-        <div className={`absolute inset-0 bg-gradient-to-r ${currentService.gradient} opacity-80 transition-all duration-1000`}></div>
-        <div className="absolute inset-0 bg-black/20"></div>
+    <section id="home" className="relative min-h-screen flex flex-col">
+      {/* Stunning Mobile-First Hero Section */}
+      <div className="relative bg-gradient-to-br from-[#0A2463] via-[#1e3a8a] to-[#5FBDB0] min-h-[70vh] md:min-h-[60vh] flex items-center justify-center overflow-hidden">
+        {/* Animated Background Elements */}
+        <div className="absolute inset-0 overflow-hidden">
+          <div className="absolute -top-40 -right-40 w-80 h-80 bg-[#FFD700]/10 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-[#5FBDB0]/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
+          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-white/5 rounded-full blur-3xl animate-pulse delay-500"></div>
+        </div>
+
+        {/* Main Hero Content */}
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 text-center">
+          {/* Premium Badge */}
+          <div className="inline-flex items-center space-x-2 bg-[#FFD700]/20 backdrop-blur-md border border-[#FFD700]/30 rounded-full px-4 py-2 mb-6 animate-fadeIn">
+            <Shield className="w-4 h-4 text-[#FFD700]" />
+            <span className="text-[#FFD700] text-sm font-medium">No Advance Payment Required</span>
+          </div>
+
+          {/* Main Headline */}
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-white mb-4 leading-tight animate-fadeIn">
+            <span className="block">Hotel Websites</span>
+            <span className="block bg-gradient-to-r from-[#FFD700] to-[#FFA500] bg-clip-text text-transparent">
+              That Convert
+            </span>
+          </h1>
+
+          {/* Subtitle */}
+          <p className="text-lg sm:text-xl md:text-2xl text-blue-100 mb-8 max-w-3xl mx-auto leading-relaxed animate-fadeIn delay-200">
+            Professional hotel websites with integrated booking engines. 
+            <span className="block mt-2 text-[#FFD700] font-semibold">Pay only when you're 100% satisfied!</span>
+          </p>
+
+          {/* Key Benefits - Mobile Optimized */}
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8 max-w-4xl mx-auto animate-fadeIn delay-300">
+            <div className="flex items-center justify-center space-x-2 bg-white/10 backdrop-blur-md rounded-lg px-4 py-3 border border-white/20">
+              <CheckCircle className="w-5 h-5 text-[#FFD700] flex-shrink-0" />
+              <span className="text-white text-sm font-medium">7-Day Delivery</span>
+            </div>
+            <div className="flex items-center justify-center space-x-2 bg-white/10 backdrop-blur-md rounded-lg px-4 py-3 border border-white/20">
+              <Zap className="w-5 h-5 text-[#FFD700] flex-shrink-0" />
+              <span className="text-white text-sm font-medium">Mobile-First Design</span>
+            </div>
+            <div className="flex items-center justify-center space-x-2 bg-white/10 backdrop-blur-md rounded-lg px-4 py-3 border border-white/20">
+              <Star className="w-5 h-5 text-[#FFD700] flex-shrink-0" />
+              <span className="text-white text-sm font-medium">5.0 Rating</span>
+            </div>
+          </div>
+
+          {/* CTA Buttons - Mobile Optimized */}
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-fadeIn delay-400">
+            <a
+              href="#templates"
+              className="group w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 bg-[#FFD700] text-[#0A2463] font-bold rounded-xl hover:bg-[#FFD700]/90 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
+            >
+              <span>View Hotel Designs</span>
+              <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+            </a>
+            <a
+              href="#contact"
+              className="group w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 bg-white/10 backdrop-blur-md text-white font-bold rounded-xl hover:bg-white/20 transition-all duration-300 border border-white/20"
+            >
+              <span>Free Consultation</span>
+            </a>
+          </div>
+
+          {/* Trust Indicators */}
+          <div className="mt-8 flex flex-wrap justify-center items-center gap-6 text-blue-200 text-sm animate-fadeIn delay-500">
+            <div className="flex items-center space-x-2">
+              <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
+              <span>200+ Hotels Served</span>
+            </div>
+            <div className="flex items-center space-x-2">
+              <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
+              <span>15+ Countries</span>
+            </div>
+            <div className="flex items-center space-x-2">
+              <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
+              <span>IIT Graduate Team</span>
+            </div>
+          </div>
+        </div>
+
+        {/* Scroll Indicator */}
+        <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 animate-bounce">
+          <div className="w-6 h-10 border-2 border-white/30 rounded-full flex justify-center">
+            <div className="w-1 h-3 bg-white/60 rounded-full mt-2 animate-pulse"></div>
+          </div>
+        </div>
       </div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-        {/* Service Card Carousel */}
-        <div className="relative max-w-4xl mx-auto">
-          {/* Main Service Card */}
-          <div className="bg-white/10 backdrop-blur-md rounded-3xl p-8 md:p-12 border border-white/20 shadow-2xl">
-            <div className="grid lg:grid-cols-2 gap-8 items-center">
-              {/* Left Content */}
-              <div className="text-white space-y-6">
-                <div className="flex items-center space-x-4">
-                  <div className={`w-16 h-16 bg-gradient-to-br ${currentService.gradient} rounded-2xl flex items-center justify-center text-white shadow-lg`}>
-                    {currentService.icon}
+      {/* Service Carousel Section */}
+      <div className="relative bg-gray-900 flex items-center justify-center overflow-hidden py-12">
+        {/* Background Image with Overlay */}
+        <div className="absolute inset-0">
+          <img
+            src={currentService.bgImage}
+            alt={currentService.title}
+            className="w-full h-full object-cover transition-all duration-1000 ease-in-out"
+          />
+          <div className={`absolute inset-0 bg-gradient-to-r ${currentService.gradient} opacity-80 transition-all duration-1000`}></div>
+          <div className="absolute inset-0 bg-black/20"></div>
+        </div>
+
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          {/* Service Card Carousel */}
+          <div className="relative max-w-4xl mx-auto">
+            {/* Main Service Card */}
+            <div className="bg-white/10 backdrop-blur-md rounded-3xl p-6 md:p-12 border border-white/20 shadow-2xl">
+              <div className="grid lg:grid-cols-2 gap-8 items-center">
+                {/* Left Content */}
+                <div className="text-white space-y-6">
+                  <div className="flex items-center space-x-4">
+                    <div className={`w-16 h-16 bg-gradient-to-br ${currentService.gradient} rounded-2xl flex items-center justify-center text-white shadow-lg`}>
+                      {currentService.icon}
+                    </div>
+                    <div>
+                      <h2 className="text-2xl md:text-3xl font-bold font-poppins">{currentService.title}</h2>
+                      <p className="text-lg text-white/80">{currentService.subtitle}</p>
+                    </div>
                   </div>
-                  <div>
-                    <h2 className="text-3xl md:text-4xl font-bold font-poppins">{currentService.title}</h2>
-                    <p className="text-xl text-white/80">{currentService.subtitle}</p>
+
+                  <p className="text-base md:text-lg text-white/90 leading-relaxed">
+                    {currentService.description}
+                  </p>
+
+                  <div className="space-y-3">
+                    {currentService.features.map((feature, index) => (
+                      <div key={index} className="flex items-center space-x-3">
+                        <div className="w-2 h-2 bg-[#FFD700] rounded-full"></div>
+                        <span className="text-white/90">{feature}</span>
+                      </div>
+                    ))}
+                  </div>
+
+                  <div className="flex items-center justify-between pt-4">
+                    <div className="text-2xl md:text-3xl font-bold text-[#FFD700]">
+                      {currentService.price}
+                    </div>
+                    <button className="group inline-flex items-center justify-center px-6 py-3 bg-[#FFD700] text-gray-900 font-semibold rounded-xl hover:bg-[#FFD700]/90 transition-all duration-300 transform hover:scale-105">
+                      Learn More
+                      <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                    </button>
                   </div>
                 </div>
 
-                <p className="text-lg text-white/90 leading-relaxed">
-                  {currentService.description}
-                </p>
-
-                <div className="space-y-3">
-                  {currentService.features.map((feature, index) => (
-                    <div key={index} className="flex items-center space-x-3">
-                      <div className="w-2 h-2 bg-[#FFD700] rounded-full"></div>
-                      <span className="text-white/90">{feature}</span>
+                {/* Right Content - Stats */}
+                <div className="space-y-6">
+                  <div className="grid grid-cols-2 gap-4">
+                    <div className="bg-white/10 backdrop-blur-md rounded-2xl p-4 md:p-6 text-center border border-white/20">
+                      <div className="text-2xl md:text-3xl font-bold text-[#FFD700] mb-2">200+</div>
+                      <div className="text-white/80 text-xs md:text-sm">Hotels Served</div>
                     </div>
-                  ))}
-                </div>
-
-                <div className="flex items-center justify-between pt-4">
-                  <div className="text-3xl font-bold text-[#FFD700]">
-                    {currentService.price}
-                  </div>
-                  <button className="group inline-flex items-center justify-center px-6 py-3 bg-[#FFD700] text-gray-900 font-semibold rounded-xl hover:bg-[#FFD700]/90 transition-all duration-300 transform hover:scale-105">
-                    Learn More
-                    <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                  </button>
-                </div>
-              </div>
-
-              {/* Right Content - Stats */}
-              <div className="space-y-6">
-                <div className="grid grid-cols-2 gap-4">
-                  <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 text-center border border-white/20">
-                    <div className="text-3xl font-bold text-[#FFD700] mb-2">200+</div>
-                    <div className="text-white/80 text-sm">Hotels Served</div>
-                  </div>
-                  <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 text-center border border-white/20">
-                    <div className="text-3xl font-bold text-[#FFD700] mb-2">5.0</div>
-                    <div className="text-white/80 text-sm flex items-center justify-center">
-                      <Star className="w-4 h-4 fill-current mr-1" />
-                      Rating
+                    <div className="bg-white/10 backdrop-blur-md rounded-2xl p-4 md:p-6 text-center border border-white/20">
+                      <div className="text-2xl md:text-3xl font-bold text-[#FFD700] mb-2">5.0</div>
+                      <div className="text-white/80 text-xs md:text-sm flex items-center justify-center">
+                        <Star className="w-4 h-4 fill-current mr-1" />
+                        Rating
+                      </div>
+                    </div>
+                    <div className="bg-white/10 backdrop-blur-md rounded-2xl p-4 md:p-6 text-center border border-white/20">
+                      <div className="text-2xl md:text-3xl font-bold text-[#FFD700] mb-2">7</div>
+                      <div className="text-white/80 text-xs md:text-sm">Days Delivery</div>
+                    </div>
+                    <div className="bg-white/10 backdrop-blur-md rounded-2xl p-4 md:p-6 text-center border border-white/20">
+                      <div className="text-2xl md:text-3xl font-bold text-[#FFD700] mb-2">15+</div>
+                      <div className="text-white/80 text-xs md:text-sm">Countries</div>
                     </div>
                   </div>
-                  <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 text-center border border-white/20">
-                    <div className="text-3xl font-bold text-[#FFD700] mb-2">7</div>
-                    <div className="text-white/80 text-sm">Days Delivery</div>
-                  </div>
-                  <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 text-center border border-white/20">
-                    <div className="text-3xl font-bold text-[#FFD700] mb-2">15+</div>
-                    <div className="text-white/80 text-sm">Countries</div>
-                  </div>
-                </div>
 
-                <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20">
-                  <h3 className="text-lg font-semibold text-white mb-3">Why Choose StayTech?</h3>
-                  <div className="space-y-2">
-                    <div className="flex items-center space-x-2">
-                      <Shield className="w-4 h-4 text-[#FFD700]" />
-                      <span className="text-white/90 text-sm">Pay only when satisfied</span>
-                    </div>
-                    <div className="flex items-center space-x-2">
-                      <Star className="w-4 h-4 text-[#FFD700]" />
-                      <span className="text-white/90 text-sm">Dedicated project manager</span>
-                    </div>
-                    <div className="flex items-center space-x-2">
-                      <TrendingUp className="w-4 h-4 text-[#FFD700]" />
-                      <span className="text-white/90 text-sm">Booking conversion experts</span>
+                  <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20">
+                    <h3 className="text-lg font-semibold text-white mb-3">Why Choose StayTech?</h3>
+                    <div className="space-y-2">
+                      <div className="flex items-center space-x-2">
+                        <Shield className="w-4 h-4 text-[#FFD700]" />
+                        <span className="text-white/90 text-sm">Pay only when satisfied</span>
+                      </div>
+                      <div className="flex items-center space-x-2">
+                        <Star className="w-4 h-4 text-[#FFD700]" />
+                        <span className="text-white/90 text-sm">Dedicated project manager</span>
+                      </div>
+                      <div className="flex items-center space-x-2">
+                        <TrendingUp className="w-4 h-4 text-[#FFD700]" />
+                        <span className="text-white/90 text-sm">Booking conversion experts</span>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
 
-          {/* Navigation Arrows */}
-          <button
-            onClick={prevSlide}
-            className="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-white/10 backdrop-blur-md rounded-full flex items-center justify-center text-white hover:bg-white/20 transition-all border border-white/20"
-          >
-            <ChevronLeft className="w-6 h-6" />
-          </button>
-          <button
-            onClick={nextSlide}
-            className="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-white/10 backdrop-blur-md rounded-full flex items-center justify-center text-white hover:bg-white/20 transition-all border border-white/20"
-          >
-            <ChevronRight className="w-6 h-6" />
-          </button>
-        </div>
-
-        {/* Carousel Indicators */}
-        <div className="flex justify-center space-x-3 mt-8">
-          {services.map((_, index) => (
+            {/* Navigation Arrows */}
             <button
-              key={index}
-              onClick={() => goToSlide(index)}
-              className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                index === currentSlide 
-                  ? 'bg-[#FFD700] scale-125' 
-                  : 'bg-white/30 hover:bg-white/50'
-              }`}
-            />
-          ))}
-        </div>
-
-        {/* Header */}
-        <div className="text-center mt-12">
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold font-poppins leading-none tracking-tight text-white mb-4">
-            <span className="text-[#FFD700] text-2xl md:text-3xl lg:text-4xl font-bold tracking-wider block mb-2">STAYTECH</span>
-            <span className="block">Hotel Solutions</span>
-          </h1>
-          
-          <p className="text-xl md:text-2xl font-light text-white/90 mb-6">
-            Complete digital transformation for hotels
-          </p>
-        </div>
-
-        {/* CTA Section */}
-        <div className="text-center mt-12">
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
-              href="#templates"
-              className="group inline-flex items-center justify-center px-8 py-4 bg-[#FFD700] text-gray-900 font-semibold rounded-xl hover:bg-[#FFD700]/90 transition-all duration-300 transform hover:scale-105 shadow-lg"
+              onClick={prevSlide}
+              className="absolute left-2 md:left-4 top-1/2 -translate-y-1/2 w-10 h-10 md:w-12 md:h-12 bg-white/10 backdrop-blur-md rounded-full flex items-center justify-center text-white hover:bg-white/20 transition-all border border-white/20"
             >
-              View All Designs
-              <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-            </a>
-            <a
-              href="#contact"
-              className="group inline-flex items-center justify-center px-8 py-4 bg-white/10 backdrop-blur-md text-white font-semibold rounded-xl hover:bg-white/20 transition-all duration-300 border border-white/20"
+              <ChevronLeft className="w-5 h-5 md:w-6 md:h-6" />
+            </button>
+            <button
+              onClick={nextSlide}
+              className="absolute right-2 md:right-4 top-1/2 -translate-y-1/2 w-10 h-10 md:w-12 md:h-12 bg-white/10 backdrop-blur-md rounded-full flex items-center justify-center text-white hover:bg-white/20 transition-all border border-white/20"
             >
-              Get Free Consultation
-            </a>
+              <ChevronRight className="w-5 h-5 md:w-6 md:h-6" />
+            </button>
           </div>
+
+          {/* Carousel Indicators */}
+          <div className="flex justify-center space-x-3 mt-8">
+            {services.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => goToSlide(index)}
+                className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                  index === currentSlide 
+                    ? 'bg-[#FFD700] scale-125' 
+                    : 'bg-white/30 hover:bg-white/50'
+                }`}
+              />
+            ))}
+          </div>
+        </div>
+
+        {/* Auto-play indicator */}
+        <div className="absolute bottom-4 left-4 text-white/60 text-xs">
+          {isAutoPlaying ? 'Auto-playing' : 'Manual control'}
         </div>
       </div>
 
-      {/* Auto-play indicator */}
-      <div className="absolute bottom-4 left-4 text-white/60 text-xs">
-        {isAutoPlaying ? 'Auto-playing' : 'Manual control'}
+      {/* Brand Section */}
+      <div className="bg-white py-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-extrabold font-poppins leading-none tracking-tight text-[#0A2463] mb-4">
+            <span className="text-[#FFD700] text-xl md:text-2xl lg:text-3xl font-bold tracking-wider block mb-2">STAYTECH</span>
+            <span className="block">Hotel Solutions</span>
+          </h1>
+          
+          <p className="text-lg md:text-xl font-light text-gray-600">
+            Complete digital transformation for hotels
+          </p>
+        </div>
       </div>
     </section>
   );
