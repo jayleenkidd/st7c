@@ -105,21 +105,22 @@ const Hero: React.FC = () => {
   return (
     <section id="home" className="relative min-h-screen flex flex-col">
       {/* Stunning Mobile-First Hero Section */}
-      <div className="relative bg-gradient-to-br from-[#0A2463] via-[#1e3a8a] to-[#5FBDB0] min-h-screen flex items-center justify-center overflow-hidden">
+      <div className="relative bg-gradient-to-br from-[#0A2463] via-[#1e3a8a] to-[#5FBDB0] h-screen flex flex-col justify-center overflow-hidden" style={{ height: '100vh', minHeight: '100dvh' }}>
         {/* Video Background */}
         <video
           autoPlay
           muted
           loop
           playsInline
-          className="absolute inset-0 w-full h-full object-cover z-0 top-0"
+          className="absolute inset-0 w-full h-full object-cover z-0"
+          style={{ height: '100vh', minHeight: '100dvh' }}
         >
           <source src="https://videos.pexels.com/video-files/3571264/3571264-uhd_2560_1440_30fps.mp4" type="video/mp4" />
           <source src="https://videos.pexels.com/video-files/4992249/4992249-hd_1920_1080_25fps.mp4" type="video/mp4" />
         </video>
         
         {/* Video Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-r from-[#0A2463]/70 via-[#1e3a8a]/50 to-[#5FBDB0]/30 z-10"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-[#0A2463]/60 via-[#1e3a8a]/40 to-[#5FBDB0]/20 z-10"></div>
         
         {/* Animated Background Elements */}
         <div className="absolute inset-0 overflow-hidden z-20">
