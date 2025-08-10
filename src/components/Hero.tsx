@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { ArrowRight, ChevronLeft, ChevronRight, Globe, Calendar, TrendingUp, Smartphone, BarChart3, Settings, Star, Shield, Zap, CheckCircle } from 'lucide-react';
+import { ArrowRight, ChevronLeft, ChevronRight, Globe, Calendar, TrendingUp, Smartphone, BarChart3, Settings, Star, Shield, Zap, CheckCircle, Eye, CreditCard, RefreshCw, Users } from 'lucide-react';
 
 const Hero: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
