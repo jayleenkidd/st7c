@@ -202,6 +202,20 @@ const Hero: React.FC = () => {
         </div>
       </div>
 
+      {/* Brand Section */}
+      <div className="bg-white py-12 md:py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold font-poppins leading-none tracking-tight text-[#0A2463] mb-6">
+            <span className="text-[#FFD700] text-2xl md:text-3xl lg:text-4xl font-bold tracking-wider block mb-3">STAYTECH</span>
+            <span className="block">Hotel Solutions</span>
+          </h1>
+          
+          <p className="text-xl md:text-2xl font-light text-gray-600 max-w-3xl mx-auto">
+            Complete digital transformation for hotels
+          </p>
+        </div>
+      </div>
+
       {/* Service Carousel Section */}
       <div className="relative bg-gray-900/95 backdrop-blur-sm flex items-center justify-center overflow-hidden py-12 z-30">
         {/* Background Image with Overlay */}
@@ -339,19 +353,6 @@ const Hero: React.FC = () => {
         </div>
       </div>
 
-      {/* Brand Section */}
-      <div className="bg-white py-12 md:py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold font-poppins leading-none tracking-tight text-[#0A2463] mb-6">
-            <span className="text-[#FFD700] text-2xl md:text-3xl lg:text-4xl font-bold tracking-wider block mb-3">STAYTECH</span>
-            <span className="block">Hotel Solutions</span>
-          </h1>
-          
-          <p className="text-xl md:text-2xl font-light text-gray-600 max-w-3xl mx-auto">
-            Complete digital transformation for hotels
-          </p>
-        </div>
-      </div>
     </section>
   );
 };
