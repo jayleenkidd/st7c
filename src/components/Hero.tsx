@@ -129,7 +129,7 @@ const Hero: React.FC = () => {
         </div>
 
         {/* Main Hero Content */}
-        <div className="relative z-30 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 pb-8">
+        <div className="relative z-30 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 pb-8 text-center">
           {/* Main Headline */}
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-white mb-4 leading-tight animate-fadeIn">
             <span className="block">Hotel Websites</span>
@@ -139,13 +139,13 @@ const Hero: React.FC = () => {
           </h1>
 
           {/* Subtitle */}
-          <p className="text-lg sm:text-xl md:text-2xl text-blue-100 mb-8 max-w-3xl mx-auto leading-relaxed animate-fadeIn delay-200">
+          <p className="text-lg sm:text-xl md:text-2xl text-blue-100 mb-8 max-w-3xl mx-auto leading-relaxed animate-fadeIn delay-200 text-center">
             Professional hotel websites with integrated booking engines. 
             <span className="block mt-2 text-[#FFD700] font-semibold">Pay only when you're 100% satisfied!</span>
           </p>
 
           {/* Key Benefits - Mobile Optimized */}
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8 max-w-4xl mx-auto animate-fadeIn delay-300">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8 max-w-4xl mx-auto animate-fadeIn delay-300 justify-center">
             <div className="flex items-center justify-center space-x-2 bg-white/10 backdrop-blur-md rounded-lg px-4 py-3 border border-white/20">
               <CheckCircle className="w-5 h-5 text-[#FFD700] flex-shrink-0" />
               <span className="text-white text-sm font-medium">7-Day Delivery</span>
@@ -161,7 +161,7 @@ const Hero: React.FC = () => {
           </div>
 
           {/* CTA Buttons - Mobile Optimized */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-fadeIn delay-400">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-fadeIn delay-400 text-center">
             <a
               href="#templates"
               className="group w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 bg-[#FFD700] text-[#0A2463] font-bold rounded-xl hover:bg-[#FFD700]/90 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
@@ -178,7 +178,7 @@ const Hero: React.FC = () => {
           </div>
 
           {/* Trust Indicators */}
-          <div className="mt-8 flex flex-wrap justify-center items-center gap-6 text-blue-200 text-sm animate-fadeIn delay-500">
+          <div className="mt-8 flex flex-wrap justify-center items-center gap-6 text-blue-200 text-sm animate-fadeIn delay-500 text-center">
             <div className="flex items-center space-x-2">
               <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
               <span>200+ Hotels Served</span>
