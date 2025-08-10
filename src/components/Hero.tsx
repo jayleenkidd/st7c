@@ -261,9 +261,6 @@ const Hero: React.FC = () => {
                   </div>
 
                   <div className="flex items-center justify-between pt-4">
-                    <div className="text-2xl md:text-3xl font-bold text-[#FFD700]">
-                      {currentService.price}
-                    </div>
                     <button className="group inline-flex items-center justify-center px-6 py-3 bg-[#FFD700] text-gray-900 font-semibold rounded-xl hover:bg-[#FFD700]/90 transition-all duration-300 transform hover:scale-105">
                       Learn More
                       <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
