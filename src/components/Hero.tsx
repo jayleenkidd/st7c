@@ -273,45 +273,246 @@ const Hero: React.FC = () => {
 
                 {/* Right Content - Stats */}
                 <div className="space-y-6">
-                  <div className="grid grid-cols-2 gap-4">
-                    <div className="bg-white/10 backdrop-blur-md rounded-2xl p-4 md:p-6 text-center border border-white/20">
-                      <div className="text-2xl md:text-3xl font-bold text-[#FFD700] mb-2">200+</div>
-                      <div className="text-white/80 text-xs md:text-sm">Hotels Served</div>
-                    </div>
-                    <div className="bg-white/10 backdrop-blur-md rounded-2xl p-4 md:p-6 text-center border border-white/20">
-                      <div className="text-2xl md:text-3xl font-bold text-[#FFD700] mb-2">5.0</div>
-                      <div className="text-white/80 text-xs md:text-sm flex items-center justify-center">
-                        <Star className="w-4 h-4 fill-current mr-1" />
-                        Rating
+                  {/* Service-specific content */}
+                  {currentService.id === 'web-design' && (
+                    <>
+                      <div className="grid grid-cols-2 gap-4">
+                        <div className="bg-white/10 backdrop-blur-md rounded-2xl p-4 md:p-6 text-center border border-white/20">
+                          <div className="text-2xl md:text-3xl font-bold text-[#FFD700] mb-2">3s</div>
+                          <div className="text-white/80 text-xs md:text-sm">Load Time</div>
+                        </div>
+                        <div className="bg-white/10 backdrop-blur-md rounded-2xl p-4 md:p-6 text-center border border-white/20">
+                          <div className="text-2xl md:text-3xl font-bold text-[#FFD700] mb-2">100%</div>
+                          <div className="text-white/80 text-xs md:text-sm">Mobile Ready</div>
+                        </div>
+                        <div className="bg-white/10 backdrop-blur-md rounded-2xl p-4 md:p-6 text-center border border-white/20">
+                          <div className="text-2xl md:text-3xl font-bold text-[#FFD700] mb-2">40%</div>
+                          <div className="text-white/80 text-xs md:text-sm">More Bookings</div>
+                        </div>
+                        <div className="bg-white/10 backdrop-blur-md rounded-2xl p-4 md:p-6 text-center border border-white/20">
+                          <div className="text-2xl md:text-3xl font-bold text-[#FFD700] mb-2">SEO</div>
+                          <div className="text-white/80 text-xs md:text-sm">Optimized</div>
+                        </div>
                       </div>
-                    </div>
-                    <div className="bg-white/10 backdrop-blur-md rounded-2xl p-4 md:p-6 text-center border border-white/20">
-                      <div className="text-2xl md:text-3xl font-bold text-[#FFD700] mb-2">7</div>
-                      <div className="text-white/80 text-xs md:text-sm">Days Delivery</div>
-                    </div>
-                    <div className="bg-white/10 backdrop-blur-md rounded-2xl p-4 md:p-6 text-center border border-white/20">
-                      <div className="text-2xl md:text-3xl font-bold text-[#FFD700] mb-2">15+</div>
-                      <div className="text-white/80 text-xs md:text-sm">Countries</div>
-                    </div>
-                  </div>
+                      <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20">
+                        <h3 className="text-lg font-semibold text-white mb-3">Design Features</h3>
+                        <div className="space-y-2">
+                          <div className="flex items-center space-x-2">
+                            <Smartphone className="w-4 h-4 text-[#FFD700]" />
+                            <span className="text-white/90 text-sm">Mobile-first approach</span>
+                          </div>
+                          <div className="flex items-center space-x-2">
+                            <Eye className="w-4 h-4 text-[#FFD700]" />
+                            <span className="text-white/90 text-sm">Conversion-focused UI</span>
+                          </div>
+                          <div className="flex items-center space-x-2">
+                            <Zap className="w-4 h-4 text-[#FFD700]" />
+                            <span className="text-white/90 text-sm">Lightning fast loading</span>
+                          </div>
+                        </div>
+                      </div>
+                    </>
+                  )}
 
-                  <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20">
-                    <h3 className="text-lg font-semibold text-white mb-3">Why Choose StayTech?</h3>
-                    <div className="space-y-2">
-                      <div className="flex items-center space-x-2">
-                        <Shield className="w-4 h-4 text-[#FFD700]" />
-                        <span className="text-white/90 text-sm">Pay only when satisfied</span>
+                  {currentService.id === 'booking-engine' && (
+                    <>
+                      <div className="grid grid-cols-2 gap-4">
+                        <div className="bg-white/10 backdrop-blur-md rounded-2xl p-4 md:p-6 text-center border border-white/20">
+                          <div className="text-2xl md:text-3xl font-bold text-[#FFD700] mb-2">0%</div>
+                          <div className="text-white/80 text-xs md:text-sm">Commission</div>
+                        </div>
+                        <div className="bg-white/10 backdrop-blur-md rounded-2xl p-4 md:p-6 text-center border border-white/20">
+                          <div className="text-2xl md:text-3xl font-bold text-[#FFD700] mb-2">24/7</div>
+                          <div className="text-white/80 text-xs md:text-sm">Real-time</div>
+                        </div>
+                        <div className="bg-white/10 backdrop-blur-md rounded-2xl p-4 md:p-6 text-center border border-white/20">
+                          <div className="text-2xl md:text-3xl font-bold text-[#FFD700] mb-2">60%</div>
+                          <div className="text-white/80 text-xs md:text-sm">More Direct</div>
+                        </div>
+                        <div className="bg-white/10 backdrop-blur-md rounded-2xl p-4 md:p-6 text-center border border-white/20">
+                          <div className="text-2xl md:text-3xl font-bold text-[#FFD700] mb-2">PCI</div>
+                          <div className="text-white/80 text-xs md:text-sm">Secure</div>
+                        </div>
                       </div>
-                      <div className="flex items-center space-x-2">
-                        <Star className="w-4 h-4 text-[#FFD700]" />
-                        <span className="text-white/90 text-sm">Dedicated project manager</span>
+                      <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20">
+                        <h3 className="text-lg font-semibold text-white mb-3">Booking Benefits</h3>
+                        <div className="space-y-2">
+                          <div className="flex items-center space-x-2">
+                            <Calendar className="w-4 h-4 text-[#FFD700]" />
+                            <span className="text-white/90 text-sm">Real-time availability</span>
+                          </div>
+                          <div className="flex items-center space-x-2">
+                            <CreditCard className="w-4 h-4 text-[#FFD700]" />
+                            <span className="text-white/90 text-sm">Secure payments</span>
+                          </div>
+                          <div className="flex items-center space-x-2">
+                            <Shield className="w-4 h-4 text-[#FFD700]" />
+                            <span className="text-white/90 text-sm">No OTA commissions</span>
+                          </div>
+                        </div>
                       </div>
-                      <div className="flex items-center space-x-2">
-                        <TrendingUp className="w-4 h-4 text-[#FFD700]" />
-                        <span className="text-white/90 text-sm">Booking conversion experts</span>
+                    </>
+                  )}
+
+                  {currentService.id === 'seo-optimization' && (
+                    <>
+                      <div className="grid grid-cols-2 gap-4">
+                        <div className="bg-white/10 backdrop-blur-md rounded-2xl p-4 md:p-6 text-center border border-white/20">
+                          <div className="text-2xl md:text-3xl font-bold text-[#FFD700] mb-2">150%</div>
+                          <div className="text-white/80 text-xs md:text-sm">Traffic Boost</div>
+                        </div>
+                        <div className="bg-white/10 backdrop-blur-md rounded-2xl p-4 md:p-6 text-center border border-white/20">
+                          <div className="text-2xl md:text-3xl font-bold text-[#FFD700] mb-2">Top 3</div>
+                          <div className="text-white/80 text-xs md:text-sm">Rankings</div>
+                        </div>
+                        <div className="bg-white/10 backdrop-blur-md rounded-2xl p-4 md:p-6 text-center border border-white/20">
+                          <div className="text-2xl md:text-3xl font-bold text-[#FFD700] mb-2">300%</div>
+                          <div className="text-white/80 text-xs md:text-sm">Local Visibility</div>
+                        </div>
+                        <div className="bg-white/10 backdrop-blur-md rounded-2xl p-4 md:p-6 text-center border border-white/20">
+                          <div className="text-2xl md:text-3xl font-bold text-[#FFD700] mb-2">GMB</div>
+                          <div className="text-white/80 text-xs md:text-sm">Optimized</div>
+                        </div>
                       </div>
-                    </div>
-                  </div>
+                      <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20">
+                        <h3 className="text-lg font-semibold text-white mb-3">SEO Strategy</h3>
+                        <div className="space-y-2">
+                          <div className="flex items-center space-x-2">
+                            <TrendingUp className="w-4 h-4 text-[#FFD700]" />
+                            <span className="text-white/90 text-sm">Keyword optimization</span>
+                          </div>
+                          <div className="flex items-center space-x-2">
+                            <Globe className="w-4 h-4 text-[#FFD700]" />
+                            <span className="text-white/90 text-sm">Local SEO focus</span>
+                          </div>
+                          <div className="flex items-center space-x-2">
+                            <BarChart3 className="w-4 h-4 text-[#FFD700]" />
+                            <span className="text-white/90 text-sm">Performance tracking</span>
+                          </div>
+                        </div>
+                      </div>
+                    </>
+                  )}
+
+                  {currentService.id === 'web-redesign' && (
+                    <>
+                      <div className="grid grid-cols-2 gap-4">
+                        <div className="bg-white/10 backdrop-blur-md rounded-2xl p-4 md:p-6 text-center border border-white/20">
+                          <div className="text-2xl md:text-3xl font-bold text-[#FFD700] mb-2">2024</div>
+                          <div className="text-white/80 text-xs md:text-sm">Modern Design</div>
+                        </div>
+                        <div className="bg-white/10 backdrop-blur-md rounded-2xl p-4 md:p-6 text-center border border-white/20">
+                          <div className="text-2xl md:text-3xl font-bold text-[#FFD700] mb-2">3x</div>
+                          <div className="text-white/80 text-xs md:text-sm">Faster Speed</div>
+                        </div>
+                        <div className="bg-white/10 backdrop-blur-md rounded-2xl p-4 md:p-6 text-center border border-white/20">
+                          <div className="text-2xl md:text-3xl font-bold text-[#FFD700] mb-2">50%</div>
+                          <div className="text-white/80 text-xs md:text-sm">Better UX</div>
+                        </div>
+                        <div className="bg-white/10 backdrop-blur-md rounded-2xl p-4 md:p-6 text-center border border-white/20">
+                          <div className="text-2xl md:text-3xl font-bold text-[#FFD700] mb-2">A+</div>
+                          <div className="text-white/80 text-xs md:text-sm">Performance</div>
+                        </div>
+                      </div>
+                      <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20">
+                        <h3 className="text-lg font-semibold text-white mb-3">Redesign Focus</h3>
+                        <div className="space-y-2">
+                          <div className="flex items-center space-x-2">
+                            <RefreshCw className="w-4 h-4 text-[#FFD700]" />
+                            <span className="text-white/90 text-sm">Complete modernization</span>
+                          </div>
+                          <div className="flex items-center space-x-2">
+                            <Smartphone className="w-4 h-4 text-[#FFD700]" />
+                            <span className="text-white/90 text-sm">Mobile-first redesign</span>
+                          </div>
+                          <div className="flex items-center space-x-2">
+                            <Zap className="w-4 h-4 text-[#FFD700]" />
+                            <span className="text-white/90 text-sm">Speed optimization</span>
+                          </div>
+                        </div>
+                      </div>
+                    </>
+                  )}
+
+                  {currentService.id === 'analytics' && (
+                    <>
+                      <div className="grid grid-cols-2 gap-4">
+                        <div className="bg-white/10 backdrop-blur-md rounded-2xl p-4 md:p-6 text-center border border-white/20">
+                          <div className="text-2xl md:text-3xl font-bold text-[#FFD700] mb-2">25%</div>
+                          <div className="text-white/80 text-xs md:text-sm">Revenue Up</div>
+                        </div>
+                        <div className="bg-white/10 backdrop-blur-md rounded-2xl p-4 md:p-6 text-center border border-white/20">
+                          <div className="text-2xl md:text-3xl font-bold text-[#FFD700] mb-2">Real</div>
+                          <div className="text-white/80 text-xs md:text-sm">Time Data</div>
+                        </div>
+                        <div className="bg-white/10 backdrop-blur-md rounded-2xl p-4 md:p-6 text-center border border-white/20">
+                          <div className="text-2xl md:text-3xl font-bold text-[#FFD700] mb-2">40%</div>
+                          <div className="text-white/80 text-xs md:text-sm">Better ROI</div>
+                        </div>
+                        <div className="bg-white/10 backdrop-blur-md rounded-2xl p-4 md:p-6 text-center border border-white/20">
+                          <div className="text-2xl md:text-3xl font-bold text-[#FFD700] mb-2">24/7</div>
+                          <div className="text-white/80 text-xs md:text-sm">Monitoring</div>
+                        </div>
+                      </div>
+                      <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20">
+                        <h3 className="text-lg font-semibold text-white mb-3">Analytics Power</h3>
+                        <div className="space-y-2">
+                          <div className="flex items-center space-x-2">
+                            <BarChart3 className="w-4 h-4 text-[#FFD700]" />
+                            <span className="text-white/90 text-sm">Revenue tracking</span>
+                          </div>
+                          <div className="flex items-center space-x-2">
+                            <TrendingUp className="w-4 h-4 text-[#FFD700]" />
+                            <span className="text-white/90 text-sm">Guest behavior insights</span>
+                          </div>
+                          <div className="flex items-center space-x-2">
+                            <Users className="w-4 h-4 text-[#FFD700]" />
+                            <span className="text-white/90 text-sm">Conversion optimization</span>
+                          </div>
+                        </div>
+                      </div>
+                    </>
+                  )}
+
+                  {currentService.id === 'hotel-pms' && (
+                    <>
+                      <div className="grid grid-cols-2 gap-4">
+                        <div className="bg-white/10 backdrop-blur-md rounded-2xl p-4 md:p-6 text-center border border-white/20">
+                          <div className="text-2xl md:text-3xl font-bold text-[#FFD700] mb-2">All-in</div>
+                          <div className="text-white/80 text-xs md:text-sm">One System</div>
+                        </div>
+                        <div className="bg-white/10 backdrop-blur-md rounded-2xl p-4 md:p-6 text-center border border-white/20">
+                          <div className="text-2xl md:text-3xl font-bold text-[#FFD700] mb-2">40%</div>
+                          <div className="text-white/80 text-xs md:text-sm">Efficiency</div>
+                        </div>
+                        <div className="bg-white/10 backdrop-blur-md rounded-2xl p-4 md:p-6 text-center border border-white/20">
+                          <div className="text-2xl md:text-3xl font-bold text-[#FFD700] mb-2">Cloud</div>
+                          <div className="text-white/80 text-xs md:text-sm">Based</div>
+                        </div>
+                        <div className="bg-white/10 backdrop-blur-md rounded-2xl p-4 md:p-6 text-center border border-white/20">
+                          <div className="text-2xl md:text-3xl font-bold text-[#FFD700] mb-2">24/7</div>
+                          <div className="text-white/80 text-xs md:text-sm">Support</div>
+                        </div>
+                      </div>
+                      <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20">
+                        <h3 className="text-lg font-semibold text-white mb-3">PMS Features</h3>
+                        <div className="space-y-2">
+                          <div className="flex items-center space-x-2">
+                            <Settings className="w-4 h-4 text-[#FFD700]" />
+                            <span className="text-white/90 text-sm">Complete management</span>
+                          </div>
+                          <div className="flex items-center space-x-2">
+                            <Users className="w-4 h-4 text-[#FFD700]" />
+                            <span className="text-white/90 text-sm">Guest communication</span>
+                          </div>
+                          <div className="flex items-center space-x-2">
+                            <Calendar className="w-4 h-4 text-[#FFD700]" />
+                            <span className="text-white/90 text-sm">Room management</span>
+                          </div>
+                        </div>
+                      </div>
+                    </>
+                  )}
                 </div>
               </div>
             </div>
