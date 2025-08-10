@@ -207,7 +207,7 @@ const Hero: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold font-poppins leading-none tracking-tight text-[#0A2463] mb-6">
             <span className="text-[#FFD700] text-2xl md:text-3xl lg:text-4xl font-bold tracking-wider block mb-3">STAYTECH</span>
-            <span className="block">Hotel Solutions</span>
+            <span className="block">Hospitality Solutions</span>
           </h1>
           
           <p className="text-xl md:text-2xl font-light text-gray-600 max-w-3xl mx-auto">
