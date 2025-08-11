@@ -105,9 +105,9 @@ const SmartDesignOptions: React.FC = () => {
               help you stay ahead in the competitive hospitality market.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-[#FFD700] text-[#0A2463] px-8 py-4 rounded-lg font-semibold hover:bg-[#FFD700]/90 transition-colors transform hover:scale-105 shadow-lg">
+              <a href="#templates" className="bg-[#FFD700] text-[#0A2463] px-8 py-4 rounded-lg font-semibold hover:bg-[#FFD700]/90 transition-colors transform hover:scale-105 shadow-lg text-center">
                 Explore Design Options
-              </button>
+              </a>
               <button className="bg-white/10 backdrop-blur-md text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/20 transition-colors border border-white/20">
                 Schedule Consultation
               </button>
