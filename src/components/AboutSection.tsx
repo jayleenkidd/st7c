@@ -143,7 +143,6 @@ const AboutSection: React.FC = () => {
                 { icon: '🛡️', title: 'Secure & Reliable', desc: 'Enterprise-grade security standards' },
                 { icon: '🔧', title: 'Feature-Rich', desc: 'Custom functionality for your needs' },
                 { icon: '🔍', title: 'SEO/UX Optimized', desc: 'Built for search engines and users' },
-                { icon: '🔑', title: 'Full Ownership', desc: 'Complete control over your digital assets' }
                 { icon: '🔑', title: 'Full Ownership', desc: 'Complete control over your digital assets' },
                 { icon: '🚀', title: 'Performance Optimized', desc: 'Built for maximum speed and efficiency' }
               ].map((advantage, index) => (
