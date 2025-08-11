@@ -54,40 +54,85 @@ const FlexiblePlansSection: React.FC = () => {
   ];
 
   return (
-    <section className="py-20 bg-gradient-to-br from-gray-50 to-white">
+    <section className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header */}
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-[#0A2463] font-poppins mb-6">
-            Flexible Web Design Plans Tailored for Hotels
-          </h2>
-          <div className="max-w-5xl mx-auto space-y-6 text-lg text-gray-600 leading-relaxed">
-            <p>
-              Our approach is shaped by experience: every hotel is unique, and so are its digital needs. 
-              Some clients want full control over their website, while others prefer a hands-off experience 
-              where we handle everything for them. That's why we offer flexible plans based on your level 
-              of involvement, technical comfort, and business goals.
-            </p>
-            <p>
-              We don't believe in forcing you into a one-size-fits-all package. Instead, we adapt our 
-              services around what works best for you. Whether you want to own your site outright, have 
-              ongoing support with regular updates, or prefer a simple monthly subscription with everything 
-              included—we've got you covered.
-            </p>
-            <p>
-              Many of our clients like to manage their own content updates; others don't have the time or 
-              interest. Either way, we're here to support you. Be as involved as you want—or leave it all 
-              to us. Just let us know what you need, and we'll take care of the rest.
-            </p>
-            <p className="font-medium text-[#0A2463]">
-              To make things easy, we offer three clear ways to get your hotel online. Each plan is designed 
-              to suit different levels of control, commitment, and budget—so you can choose the one that fits you best.
-            </p>
+        {/* Enhanced Header with Gradient Background */}
+        <div className="relative mb-16 overflow-hidden">
+          {/* Gradient Background Section */}
+          <div className="bg-gradient-to-br from-[#0A2463] via-[#1e3a8a] to-[#5FBDB0] rounded-3xl p-8 md:p-12 relative overflow-hidden">
+            {/* Background Decorative Elements */}
+            <div className="absolute inset-0 overflow-hidden">
+              <div className="absolute -top-40 -right-40 w-80 h-80 bg-[#FFD700]/10 rounded-full blur-3xl"></div>
+              <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-white/10 rounded-full blur-3xl"></div>
+              <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-[#5FBDB0]/10 rounded-full blur-3xl"></div>
+            </div>
+            
+            {/* Content */}
+            <div className="relative z-10 text-center">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white font-poppins mb-8 leading-tight">
+                Flexible Web Design Plans
+                <span className="block text-[#FFD700] mt-2">Tailored for Hotels</span>
+              </h2>
+              
+              {/* Introduction Cards */}
+              <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-6 mb-8">
+                <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20 text-left">
+                  <div className="flex items-start space-x-4">
+                    <div className="w-12 h-12 bg-[#FFD700] rounded-xl flex items-center justify-center flex-shrink-0 mt-1">
+                      <span className="text-[#0A2463] font-bold text-xl">🎯</span>
+                    </div>
+                    <div>
+                      <h3 className="text-lg font-bold text-white mb-2">Experience-Driven Approach</h3>
+                      <p className="text-blue-100 text-sm leading-relaxed">
+                        Every hotel is unique, and so are its digital needs. Some clients want full control over their website, 
+                        while others prefer a hands-off experience where we handle everything for them.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                
+                <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20 text-left">
+                  <div className="flex items-start space-x-4">
+                    <div className="w-12 h-12 bg-[#FFD700] rounded-xl flex items-center justify-center flex-shrink-0 mt-1">
+                      <span className="text-[#0A2463] font-bold text-xl">🔧</span>
+                    </div>
+                    <div>
+                      <h3 className="text-lg font-bold text-white mb-2">No One-Size-Fits-All</h3>
+                      <p className="text-blue-100 text-sm leading-relaxed">
+                        We don't believe in forcing you into a package. Instead, we adapt our services around what works best for you. 
+                        Whether you want to own your site outright or prefer everything included—we've got you covered.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              {/* Key Message */}
+              <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20 max-w-4xl mx-auto">
+                <div className="flex items-center justify-center space-x-4 mb-4">
+                  <div className="w-8 h-8 bg-[#FFD700] rounded-full flex items-center justify-center">
+                    <span className="text-[#0A2463] font-bold">✨</span>
+                  </div>
+                  <h3 className="text-xl font-bold text-white">Your Level of Involvement, Your Choice</h3>
+                  <div className="w-8 h-8 bg-[#FFD700] rounded-full flex items-center justify-center">
+                    <span className="text-[#0A2463] font-bold">✨</span>
+                  </div>
+                </div>
+                <p className="text-blue-100 leading-relaxed mb-4">
+                  Many of our clients like to manage their own content updates; others don't have the time or interest. 
+                  Either way, we're here to support you. Be as involved as you want—or leave it all to us.
+                </p>
+                <p className="text-[#FFD700] font-semibold text-lg">
+                  To make things easy, we offer three clear ways to get your hotel online. Each plan is designed 
+                  to suit different levels of control, commitment, and budget—so you can choose the one that fits you best.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
 
         {/* Plans Grid */}
-        <div className="grid lg:grid-cols-3 gap-8">
+        <div className="grid lg:grid-cols-3 gap-8 bg-gradient-to-br from-gray-50 to-white rounded-2xl p-8">
           {plans.map((plan, index) => (
             <div
               key={plan.id}
