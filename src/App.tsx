@@ -11,6 +11,7 @@ import PricingSection from './components/PricingSection';
 import TestimonialsSection from './components/TestimonialsSection';
 import ContactSection from './components/ContactSection';
 import Footer from './components/Footer';
+import SmartDesignOptions from './components/SmartDesignOptions';
 import WebDesignService from './pages/WebDesignService';
 import BookingEngineService from './pages/BookingEngineService';
 import SEOService from './pages/SEOService';
@@ -102,6 +103,7 @@ function App() {
       <Hero />
       <USPSection />
       <ServicesOverview onServiceSelect={setActiveService} />
+      <SmartDesignOptions />
       <TemplateShowcase />
       <DashboardShowcase />
       <PricingSection />
