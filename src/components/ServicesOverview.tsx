@@ -234,18 +234,6 @@ const ServicesOverview: React.FC<ServicesOverviewProps> = ({ onServiceSelect }) 
             </div>
           </div>
         </div>
-                  {process.step}
-                </div>
-                <h4 className="text-xl font-bold text-[#0A2463] mb-4 font-poppins">
-                  {process.title}
-                </h4>
-                <p className="text-gray-600 leading-relaxed">
-                  {process.description}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
       </div>
     </section>
   );
