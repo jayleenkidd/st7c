@@ -116,6 +116,168 @@ const AboutSection: React.FC = () => {
           ))}
         </div>
 
+        {/* Our Tech Stack Section */}
+        <div className="mb-20">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-[#0A2463] font-poppins mb-4">
+              Our Web Development Tech Stack
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
+              Engineering Your Success with Modern Technologies
+            </p>
+            <p className="text-lg text-gray-600 max-w-4xl mx-auto">
+              StayTech builds every project from scratch for top performance, security, and scalability using cutting-edge technologies.
+            </p>
+          </div>
+
+          {/* Why Build From Scratch */}
+          <div className="mb-16">
+            <h3 className="text-2xl font-bold text-[#0A2463] text-center mb-12 font-poppins">
+              Why Build From Scratch?
+            </h3>
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+              {[
+                { icon: '🎨', title: 'Unique & Customizable', desc: 'Tailored solutions that reflect your brand' },
+                { icon: '📈', title: 'Scalable & Future-Proof', desc: 'Built to grow with your business' },
+                { icon: '⚡', title: 'Fast & Lightweight', desc: 'Optimized for speed and performance' },
+                { icon: '🛡️', title: 'Secure & Reliable', desc: 'Enterprise-grade security standards' },
+                { icon: '🔧', title: 'Feature-Rich', desc: 'Custom functionality for your needs' },
+                { icon: '🔍', title: 'SEO/UX Optimized', desc: 'Built for search engines and users' },
+                { icon: '🔑', title: 'Full Ownership', desc: 'Complete control over your digital assets' }
+              ].map((advantage, index) => (
+                <div key={index} className="bg-gradient-to-br from-gray-50 to-white rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow text-center border border-gray-100">
+                  <div className="text-3xl mb-4">{advantage.icon}</div>
+                  <h4 className="font-bold text-[#0A2463] mb-2">{advantage.title}</h4>
+                  <p className="text-gray-600 text-sm">{advantage.desc}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Front-End Technology Stack */}
+          <div className="mb-16">
+            <h3 className="text-2xl font-bold text-[#0A2463] text-center mb-12 font-poppins">
+              Front-End Technology Stack
+            </h3>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {[
+                {
+                  name: 'React',
+                  color: 'from-blue-500 to-cyan-500',
+                  description: 'Lightning-fast dynamic interfaces',
+                  tools: ['React', 'Redux', 'Redux-Saga', 'RxJS', 'React Native', 'Three.JS', 'Next.js']
+                },
+                {
+                  name: 'Angular',
+                  color: 'from-red-500 to-pink-500',
+                  description: 'Enterprise-grade applications',
+                  tools: ['Angular', 'NgRx', 'NGXS', 'MobX', 'Formly', 'Ionic']
+                },
+                {
+                  name: 'Vue.js',
+                  color: 'from-green-500 to-emerald-500',
+                  description: 'Progressive web applications',
+                  tools: ['Vue.js', 'Vuex', 'Vue Router', 'Nuxt.js', 'Vue CLI', 'Vue Meta']
+                },
+                {
+                  name: 'JavaScript + UI',
+                  color: 'from-yellow-500 to-orange-500',
+                  description: 'Modern development ecosystem',
+                  tools: ['Material UI', 'Ant Design', 'Apollo', 'Jest', 'TypeScript', 'Electron']
+                }
+              ].map((tech, index) => (
+                <div key={index} className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow border border-gray-100">
+                  <div className={`w-12 h-12 bg-gradient-to-br ${tech.color} rounded-lg flex items-center justify-center text-white font-bold text-lg mb-4`}>
+                    {tech.name.charAt(0)}
+                  </div>
+                  <h4 className="text-xl font-bold text-[#0A2463] mb-2">{tech.name}</h4>
+                  <p className="text-gray-600 text-sm mb-4">{tech.description}</p>
+                  <div className="flex flex-wrap gap-2">
+                    {tech.tools.map((tool, toolIndex) => (
+                      <span key={toolIndex} className="bg-gray-100 text-gray-700 px-2 py-1 rounded text-xs">
+                        {tool}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Back-End Technology Stack */}
+          <div className="mb-16">
+            <h3 className="text-2xl font-bold text-[#0A2463] text-center mb-12 font-poppins">
+              Back-End Technology Stack
+            </h3>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {[
+                {
+                  name: 'Java',
+                  color: 'from-orange-600 to-red-600',
+                  description: 'Enterprise-grade backend solutions',
+                  tools: ['Spring', 'Hibernate', 'Kafka', 'Docker', 'Kubernetes', 'PostgreSQL', 'MongoDB', 'Redis']
+                },
+                {
+                  name: '.NET',
+                  color: 'from-purple-600 to-blue-600',
+                  description: 'Microsoft ecosystem solutions',
+                  tools: ['.NET Core', 'ASP.NET', 'Azure', 'Stateless Architecture']
+                },
+                {
+                  name: 'Python',
+                  color: 'from-blue-600 to-green-600',
+                  description: 'Versatile and powerful backend',
+                  tools: ['Django', 'Flask', 'FastAPI', 'Celery', 'PostgreSQL', 'MongoDB', 'Docker']
+                },
+                {
+                  name: 'PHP',
+                  color: 'from-indigo-600 to-purple-600',
+                  description: 'Web-focused development',
+                  tools: ['Laravel', 'Symfony', 'Yii2', 'Drupal', 'Elasticsearch', 'REST/GraphQL', 'Docker']
+                },
+                {
+                  name: 'Node.js',
+                  color: 'from-green-600 to-teal-600',
+                  description: 'JavaScript everywhere',
+                  tools: ['NestJS', 'Koa', 'MongoDB', 'PostgreSQL', 'AWS']
+                },
+                {
+                  name: 'Ruby',
+                  color: 'from-red-600 to-pink-600',
+                  description: 'Elegant web applications',
+                  tools: ['Rails', 'Sinatra', 'Hanami', 'Sidekiq', 'GraphQL']
+                }
+              ].map((tech, index) => (
+                <div key={index} className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow border border-gray-100">
+                  <div className={`w-12 h-12 bg-gradient-to-br ${tech.color} rounded-lg flex items-center justify-center text-white font-bold text-lg mb-4`}>
+                    {tech.name.charAt(0)}
+                  </div>
+                  <h4 className="text-xl font-bold text-[#0A2463] mb-2">{tech.name}</h4>
+                  <p className="text-gray-600 text-sm mb-4">{tech.description}</p>
+                  <div className="flex flex-wrap gap-2">
+                    {tech.tools.map((tool, toolIndex) => (
+                      <span key={toolIndex} className="bg-gray-100 text-gray-700 px-2 py-1 rounded text-xs">
+                        {tool}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* The StayTech Advantage */}
+          <div className="bg-gradient-to-r from-[#0A2463] to-[#5FBDB0] rounded-2xl p-8 text-white text-center">
+            <h3 className="text-2xl font-bold mb-4 font-poppins">The StayTech Advantage</h3>
+            <p className="text-lg text-blue-100 mb-6 max-w-3xl mx-auto">
+              Partnering with StayTech means getting a custom-built, scalable, and secure digital foundation—delivered 
+              with leading-edge tools and the expertise to help your business grow.
+            </p>
+            <a href="#contact" className="bg-[#FFD700] text-[#0A2463] px-8 py-4 rounded-lg font-semibold hover:bg-[#FFD700]/90 transition-colors transform hover:scale-105 inline-block">
+              Ready to Start a Project? Get in Touch!
+            </a>
+          </div>
+        </div>
         {/* Team */}
         <div>
           <div className="text-center mb-12">
