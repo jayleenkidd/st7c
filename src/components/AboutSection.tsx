@@ -144,6 +144,8 @@ const AboutSection: React.FC = () => {
                 { icon: '🔧', title: 'Feature-Rich', desc: 'Custom functionality for your needs' },
                 { icon: '🔍', title: 'SEO/UX Optimized', desc: 'Built for search engines and users' },
                 { icon: '🔑', title: 'Full Ownership', desc: 'Complete control over your digital assets' }
+                { icon: '🔑', title: 'Full Ownership', desc: 'Complete control over your digital assets' },
+                { icon: '🚀', title: 'Performance Optimized', desc: 'Built for maximum speed and efficiency' }
               ].map((advantage, index) => (
                 <div key={index} className="bg-gradient-to-br from-gray-50 to-white rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow text-center border border-gray-100">
                   <div className="text-3xl mb-4">{advantage.icon}</div>
@@ -184,6 +186,18 @@ const AboutSection: React.FC = () => {
                   color: 'from-yellow-500 to-orange-500',
                   description: 'Modern development ecosystem',
                   tools: ['Material UI', 'Ant Design', 'Apollo', 'Jest', 'TypeScript', 'Electron']
+                },
+                {
+                  name: 'Svelte',
+                  color: 'from-orange-500 to-red-500',
+                  description: 'Compile-time optimized framework',
+                  tools: ['Svelte', 'SvelteKit', 'Sapper', 'Rollup', 'Vite', 'Tailwind CSS']
+                },
+                {
+                  name: 'Flutter Web',
+                  color: 'from-blue-600 to-indigo-600',
+                  description: 'Cross-platform web applications',
+                  tools: ['Flutter', 'Dart', 'Firebase', 'Material Design', 'Cupertino', 'Provider']
                 }
               ].map((tech, index) => (
                 <div key={index} className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow border border-gray-100">
