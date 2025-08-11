@@ -12,6 +12,7 @@ import TestimonialsSection from './components/TestimonialsSection';
 import ContactSection from './components/ContactSection';
 import Footer from './components/Footer';
 import SmartDesignOptions from './components/SmartDesignOptions';
+import FlexiblePlansSection from './components/FlexiblePlansSection';
 import WebDesignService from './pages/WebDesignService';
 import BookingEngineService from './pages/BookingEngineService';
 import SEOService from './pages/SEOService';
@@ -106,6 +107,7 @@ function App() {
       <SmartDesignOptions />
       <TemplateShowcase />
       <DashboardShowcase />
+      <FlexiblePlansSection />
       <PricingSection />
       <AboutSection />
       <TestimonialsSection />
