@@ -22,10 +22,10 @@ const USPSection: React.FC = () => {
       iconBg: "from-teal-500 to-yellow-500"
     },
     {
-      icon: <Eye className="w-8 h-8" />,
-      title: "Building Long-Term Relationships",
-      subtitle: "Not Just Contracts",
-      description: "Unlike traditional agencies, we focus on fostering enduring partnerships. We offer no long-term contracts or hidden commitments. Our monthly offerings provide complete flexibility, allowing you to cancel anytime if you're not completely satisfied. Our clients stay with us because of the consistent quality, transparency, and tangible results we deliver, not because of binding agreements. This approach ensures our interests are always aligned with yours.",
+      icon: <Settings className="w-8 h-8" />,
+      title: "Dedicated Project Manager: Your Single Point of Contact",
+      subtitle: "Personalized Experience",
+      description: "Every project at StayTech is assigned a dedicated project manager. This ensures a seamless and personalized experience from the initial consultation to successful launch and beyond. Your project manager acts as your single point of contact, understanding your unique needs, coordinating our expert teams, and keeping you informed every step of the way. This personalized attention guarantees smooth execution and timely delivery.",
       color: "from-[#FFD700] to-[#0A2463]",
       bgPattern: "bg-gradient-to-br from-yellow-50/50 to-blue-50/50",
       iconBg: "from-yellow-500 to-blue-600"
