@@ -11,22 +11,22 @@ const AboutSection: React.FC = () => {
 
   const team = [
     {
-      name: 'Rajesh Kumar',
+      name: 'Manish Kumar',
       position: 'Founder & CEO',
       image: 'https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=300',
-      description: '15+ years in hospitality technology'
+      description: 'B Tech, M Tech, Computer Science, IIT Roorkee'
     },
     {
-      name: 'Priya Sharma',
+      name: 'Nidhi Thakur',
       position: 'Lead Designer',
       image: 'https://images.pexels.com/photos/3785077/pexels-photo-3785077.jpeg?auto=compress&cs=tinysrgb&w=300',
       description: 'Award-winning UI/UX specialist'
     },
     {
-      name: 'Amit Patel',
-      position: 'Technical Director',
+      name: 'Aniruddh Singh',
+      position: 'Head of Marketing',
       image: 'https://images.pexels.com/photos/2182970/pexels-photo-2182970.jpeg?auto=compress&cs=tinysrgb&w=300',
-      description: 'Full-stack development expert'
+      description: '10+ Years in Digital Marketing'
     }
   ];
 

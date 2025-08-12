@@ -192,7 +192,7 @@ const Header: React.FC<HeaderProps> = ({ onServiceSelect }) => {
               isScrolled ? 'text-gray-700 hover:text-[#0A2463]' : 'text-white/90 hover:text-[#FFD700]'
             }`}>
               <Phone className="w-4 h-4" />
-              <span>+91 12345 67890</span>
+              <span>+91 9310495471</span>
             </a>
             <a href="mailto:info@staytech.com" className={`flex items-center space-x-1 text-sm font-medium transition-colors ${
               isScrolled ? 'text-gray-700 hover:text-[#0A2463]' : 'text-white/90 hover:text-[#FFD700]'
@@ -257,9 +257,9 @@ const Header: React.FC<HeaderProps> = ({ onServiceSelect }) => {
                 )
               ))}
               <div className="border-t pt-4 px-4 space-y-2">
-                <a href="tel:+911234567890" className="flex items-center space-x-2 text-sm text-gray-700 font-medium">
+                <a href="tel:+919310495471" className="flex items-center space-x-2 text-sm text-gray-700 font-medium">
                   <Phone className="w-4 h-4" />
-                  <span>+91 12345 67890</span>
+                  <span>+91 9310495471</span>
                 </a>
                 <a href="mailto:info@staytech.com" className="flex items-center space-x-2 text-sm text-gray-700 font-medium">
                   <Mail className="w-4 h-4" />

@@ -33,7 +33,7 @@ const ContactSection: React.FC = () => {
     {
       icon: <Phone className="w-6 h-6" />,
       title: 'Call Us',
-      details: ['+91 12345 67890', '+91 98765 43210']
+      details: ['+91 9310495471', '+91 9205402295']
     },
     {
       icon: <Mail className="w-6 h-6" />,
@@ -240,11 +240,11 @@ const ContactSection: React.FC = () => {
               </h4>
               <div className="space-y-3">
                 <a
-                  href="tel:+911234567890"
+                  href="tel:+919310495471"
                   className="flex items-center space-x-3 hover:text-[#FFD700] transition-colors"
                 >
                   <Phone className="w-5 h-5" />
-                  <span>Call us at +91 12345 67890</span>
+                  <span>Call us at +91 9310495471</span>
                 </a>
                 <a
                   href="mailto:info@staytech.com"
