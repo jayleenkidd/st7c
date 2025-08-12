@@ -13,19 +13,19 @@ const AboutSection: React.FC = () => {
     {
       name: 'Manish Kumar',
       position: 'Founder & CEO',
-      image: 'https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=300',
+      image: '/src/assets/manish.png',
       description: 'B Tech, M Tech, Computer Science, IIT Roorkee'
     },
     {
       name: 'Nidhi Thakur',
       position: 'Lead Designer',
-      image: 'https://images.pexels.com/photos/3785077/pexels-photo-3785077.jpeg?auto=compress&cs=tinysrgb&w=300',
+      image: '/src/assets/nidhi.png',
       description: 'Award-winning UI/UX specialist'
     },
     {
       name: 'Aniruddh Singh',
       position: 'Head of Marketing',
-      image: 'https://images.pexels.com/photos/2182970/pexels-photo-2182970.jpeg?auto=compress&cs=tinysrgb&w=300',
+      image: '/src/assets/aniruddh.jpg',
       description: '10+ Years in Digital Marketing'
     }
   ];
